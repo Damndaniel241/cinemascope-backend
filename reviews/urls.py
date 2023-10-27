@@ -16,4 +16,6 @@ urlpatterns = [
     path('retrieve-review/',retreive_review),
     path('reviews/<int:id>/',get_review_object),
     path('create-comment/', create_comment),
+    path('comments/<int:id>/',get_comment_object),
+    path('comments/review/<int:review_id>/',get_comments_for_review),
 ]

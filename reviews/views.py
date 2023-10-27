@@ -164,47 +164,43 @@ def unlike_movie(request):
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def rate_movie(request):
-    if request.method == 'POST':
-        data = request.data
+    data = request.data
 
-        try:
-            movie_id = data['movie_id']
-            # rate_status = data.get('stars', 0)
-            stars  = data['stars']
-           
-            try:
-                movie = Movie.objects.get(movie_id=movie_id)
-            except Movie.DoesNotExist:
-                # return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
-                 movie = Movie(movie_id=movie_id)
-                 movie.save()
-            
-             # Create a new review object
-            # rate = Rating(user=request.user,movie=movie, stars=stars)
-            # rate.save()
-            # rating = Rating(user=request.user,movie=movie,)
-            rating, created = Rating.objects.get_or_create(user=request.user, movie=movie)
-            if stars is not None  and (created or stars > rating.stars):
-            
-                rating.stars = stars
-                rating.save()
-            else:
-                return Response({'error': 'Stars cannot be null'}, status=status.HTTP_400_BAD_REQUEST)
-
-
-
-
-            
-            create_or_update_user_profile(request.user)
-
-    
-
-            return Response({'message': 'Movie rated successfully'}, status=status.HTTP_201_CREATED)
-        except KeyError:
-            return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
-    else:
-        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+    try:
+        movie_id = data['movie_id']
+        # rate_status = data.get('stars', 0)
+        stars  = data['stars']
         
+        try:
+            movie = Movie.objects.get(movie_id=movie_id)
+        except Movie.DoesNotExist:
+            # return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
+                movie = Movie(movie_id=movie_id)
+                movie.save()
+        
+            # Create a new review object
+        # rate = Rating(user=request.user,movie=movie, stars=stars)
+        # rate.save()
+        # rating = Rating(user=request.user,movie=movie,)
+        rating, created = Rating.objects.get_or_create(user=request.user, movie=movie)
+        if stars is not None:
+        
+            rating.stars = stars
+            rating.save()
+        else:
+            return Response({'error': 'Stars cannot be null'}, status=status.HTTP_400_BAD_REQUEST)
+
+
+
+
+        
+        create_or_update_user_profile(request.user)
+
+
+
+        return Response({'message': 'Movie rated successfully'}, status=status.HTTP_201_CREATED)
+    except KeyError:
+        return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 
@@ -232,7 +228,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 @api_view(['GET'])
 def retreive_review(request):
         try: 
-            reviews = Review.objects.all()
+            reviews = Review.objects.all().order_by('-created_at')
             serialized_reviews = []
 
             for review in reviews:
@@ -246,6 +242,19 @@ def retreive_review(request):
         except:
             return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
 
+
+    
+@api_view(['GET'])
+def get_comments_for_review(request, review_id):
+    comments = Comment.objects.filter(review=review_id)
+    serialized_comments = []
+    for comment in comments:
+        username = comment.user.username
+        serialized_comment = CommentSerializer(comment).data
+        serialized_comment['user_username'] = username
+        serialized_comments.append(serialized_comment)
+    # serializer = CommentSerializer(comments, many=True)
+    return Response(serialized_comments, status=status.HTTP_200_OK)
 
 @api_view(['GET'])
 def get_review_object(request,id):
@@ -264,6 +273,19 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Comment
         fields = '__all__'
+
+
+
+@api_view(['GET'])
+def get_comment_object(request,id):
+    try:
+        comment = get_object_or_404(Comment,id=id)
+
+        serializer = CommentSerializer(comment)
+        return Response({"comment":serializer.data})
+    except:
+        return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
+
 
 
 @api_view(['POST'])

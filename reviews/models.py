@@ -30,8 +30,8 @@ class Comment(models.Model):
     review = models.ForeignKey(Review, on_delete=models.CASCADE)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    # def __str__(self,other):
-    #     return f"{self.user} replied to {other.user} on {self.review}"
+    def __str__(self):
+        return f"{self.user} replied to {self.review.user}'s Review"
     # Other comment-related fields
     # ...
 
