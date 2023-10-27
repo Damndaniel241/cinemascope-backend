@@ -37,6 +37,7 @@ def create_or_update_user_profile(user):
     user_profile.user_reviews.set(Review.objects.filter(user=user))
     user_profile.liked_reviews.set(Review.objects.filter(user=user))
     user_profile.rated_reviews.set(Review.objects.filter(user=user))
+    user_profile.user_comments.set(Comment.objects.filter(user=user))
 
     # Save the user profile
     user_profile.save()
@@ -45,32 +46,30 @@ def create_or_update_user_profile(user):
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def create_review(request):
-    if request.method == 'POST':
-        data = request.data
+    data = request.data
+    try:
+        content = data['content']
+        movie_id = data['movie_id']
+
         try:
-            content = data['content']
-            movie_id = data['movie_id']
+            movie = Movie.objects.get(movie_id=movie_id)
+        except Movie.DoesNotExist:
+            # If the Movie doesn't exist, create it
+            movie = Movie(movie_id=movie_id)
+            movie.save()
 
-            try:
-                movie = Movie.objects.get(movie_id=movie_id)
-            except Movie.DoesNotExist:
-                # If the Movie doesn't exist, create it
-                movie = Movie(movie_id=movie_id)
-                movie.save()
+        
+        # Create a new review object
+        review = Review(user=request.user,movie=movie, content=content)
+        review.save()
+        # rating = Rating(user=request.user,movie=movie,)
+        create_or_update_user_profile(request.user)
+        
+        return Response({'message': 'Review created successfully'}, status=status.HTTP_201_CREATED)
+    except KeyError:
+        return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
 
-            
-            # Create a new review object
-            review = Review(user=request.user,movie=movie, content=content)
-            review.save()
-            # rating = Rating(user=request.user,movie=movie,)
-            create_or_update_user_profile(request.user)
-            
-            return Response({'message': 'Review created successfully'}, status=status.HTTP_201_CREATED)
-        except KeyError:
-            return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
-    else:
-        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
-
+    
 
 
 class LikeSerializer(serializers.ModelSerializer):
@@ -89,31 +88,30 @@ class LikeSerializer(serializers.ModelSerializer):
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def like_movie(request):
-    if request.method == 'POST':
-        data = request.data
+  
+    data = request.data
+    try:
+        movie_id = data['movie_id']
+        like_status = data.get('like', True)  # Default to True if 'like' is not provided
+
         try:
-            movie_id = data['movie_id']
-            like_status = data.get('like', True)  # Default to True if 'like' is not provided
+            movie = Movie.objects.get(movie_id=movie_id)
+        except Movie.DoesNotExist:
+            # return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
+                movie = Movie(movie_id=movie_id)
+                movie.save()
 
-            try:
-                movie = Movie.objects.get(movie_id=movie_id)
-            except Movie.DoesNotExist:
-                # return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
-                 movie = Movie(movie_id=movie_id)
-                 movie.save()
+        # Check if the user has already liked/disliked the movie
+        existing_like, created = Like.objects.get_or_create(user=request.user, movie=movie)
+        existing_like.like = like_status
 
-            # Check if the user has already liked/disliked the movie
-            existing_like, created = Like.objects.get_or_create(user=request.user, movie=movie)
-            existing_like.like = like_status
+        existing_like.save()
+        create_or_update_user_profile(request.user)
 
-            existing_like.save()
-            create_or_update_user_profile(request.user)
-
-            return Response({'message': 'Movie liked/disliked successfully'}, status=status.HTTP_201_CREATED)
-        except KeyError:
-            return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
-    else:
-        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
+        return Response({'message': 'Movie liked/disliked successfully'}, status=status.HTTP_201_CREATED)
+    except KeyError:
+        return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
+   
 
 
 @api_view(['GET'])
@@ -135,27 +133,26 @@ def check_like_status(request, movie_id):
 @authentication_classes([TokenAuthentication])
 @permission_classes([IsAuthenticated])
 def unlike_movie(request):
-    if request.method == 'POST':
-        data = request.data
+
+    data = request.data
+    try:
+        movie_id = data['movie_id']
+
         try:
-            movie_id = data['movie_id']
+            movie = Movie.objects.get(movie_id=movie_id)
+        except Movie.DoesNotExist:
+            return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
 
-            try:
-                movie = Movie.objects.get(movie_id=movie_id)
-            except Movie.DoesNotExist:
-                return Response({'error': 'Movie not found'}, status=status.HTTP_404_NOT_FOUND)
+        # Check if the user has already liked/disliked the movie
+        try:
+            existing_like = Like.objects.get(user=request.user, movie=movie)
+            existing_like.delete()  # Delete the like from the database
+            return Response({'message': 'Movie unliked successfully'}, status=status.HTTP_200_OK)
+        except Like.DoesNotExist:
+            return Response({'error': 'You have not liked this movie'}, status=status.HTTP_400_BAD_REQUEST)
+    except KeyError:
+        return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
 
-            # Check if the user has already liked/disliked the movie
-            try:
-                existing_like = Like.objects.get(user=request.user, movie=movie)
-                existing_like.delete()  # Delete the like from the database
-                return Response({'message': 'Movie unliked successfully'}, status=status.HTTP_200_OK)
-            except Like.DoesNotExist:
-                return Response({'error': 'You have not liked this movie'}, status=status.HTTP_400_BAD_REQUEST)
-        except KeyError:
-            return Response({'error': 'Invalid data format'}, status=status.HTTP_400_BAD_REQUEST)
-    else:
-        return Response({'error': 'Method not allowed'}, status=status.HTTP_405_METHOD_NOT_ALLOWED)
     
 
 
@@ -205,19 +202,6 @@ def rate_movie(request):
 
 
 
-@api_view(['POST'])
-@authentication_classes([TokenAuthentication])
-@permission_classes([IsAuthenticated])
-def comment_review(request):
-    if request.method == "POST":
-        data = request.data
-
-        try:
-            content = data['content']
-            review = data['review']
-
-        except:
-            pass
 
 
 class ReviewSerializer(serializers.ModelSerializer):
