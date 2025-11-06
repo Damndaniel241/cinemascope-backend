@@ -486,3 +486,5 @@ HTTP response body: {"message":"Key not found","code":"unauthorized"}
 2025-11-06 21:01:49,939 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
 2025-11-06 21:01:56,074 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
 2025-11-06 21:01:56,692 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 21:08:24,829 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 21:08:25,530 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
