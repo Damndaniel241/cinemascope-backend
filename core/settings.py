@@ -14,6 +14,7 @@ from pathlib import Path
 import sys, os
 from dotenv import load_dotenv
 from datetime import timedelta
+import logging
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +29,7 @@ SECRET_KEY = 'django-insecure-#@oxm!*$9ydn(a^-h@5%)=!c()b@mlev$43^ww%q3fa1oyos_$
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+LOGGER = logging.getLogger(__name__)
 
 # Application definition
 
@@ -187,3 +188,67 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+# gmail settings
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_FROM = 'lombardia241@gmail.com'
+EMAIL_HOST_USER = 'lombardia241@gmail.com'
+EMAIL_HOST_PASSWORD= 'mgym adbc evvy bsf'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
+
+EMAIL_CLIENT_ID = "0e432d2f7b9376bad39ee215ae3d7ea9"
+EMAIL_CLIENT_SECRET = "d473f9d0575c7e0b938b87a322a54fc4"
+
+
+LOGGING = {
+    "version":1,
+    "disable_existing_loggers":False,
+    "filters":{},
+    "formatters":{
+        'verbose': {
+            'format': '{asctime} {levelname} {name} {message} {module}.py',
+            'style': '{',
+        },
+        },
+    "handlers":{
+        'console':{
+            'level':'DEBUG',
+            'class':'logging.StreamHandler',
+            'formatter':'verbose',
+        },
+        'file': {
+            'class': 'logging.FileHandler',
+            'filename': 'errors.log',
+            'formatter': 'verbose',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'formatter': 'verbose',
+        },
+    },
+    "loggers":{
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        "users": {  # <--- Add this block
+        "handlers": ["console", "file"],
+        "level": "INFO",
+        "propagate": True,
+    },
+        },
+    'root': {
+        'handlers': ['console', 'file', 'mail_admins'],
+        'level': 'WARNING',
+    },
+
+
+}

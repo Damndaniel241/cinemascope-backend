@@ -8,20 +8,36 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.exceptions import AuthenticationFailed
 from .models import User
-
+from .services import activate_email
+import logging
 
 # Create your views here.
+LOGGER = logging.getLogger(__name__)
+
+
+
+
+
+def security_set(request):
+    return 'https' if request.is_secure() else 'http'
+
+
 @api_view(['POST'])
 def signup(request):
     try:
         data = request.data
+        email = data.get("email")
         serializer = UserSerializer(data=data)
-        print("serializer = ",serializer)
+        # print("serializer = ",serializer)
         if serializer.is_valid():
             serializer.save()
+            activate_email(email)
+            LOGGER.info("Testing info log")
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return Response({"message":serializer.errors},status=status.HTTP_400_BAD_REQUEST)
     except Exception as e:
+        LOGGER.warning("Testing warning log")
+        LOGGER.error("Testing error log")
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
     
     

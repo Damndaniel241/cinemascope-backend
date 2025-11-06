@@ -1,0 +1,488 @@
+2025-11-01 00:44:15,559 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-01 00:44:15,560 INFO users.views Testing info log views.py
+2025-11-01 00:50:07,214 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-01 00:50:08,851 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-01 00:50:09,651 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-01 00:50:13,400 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-01 00:50:14,003 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-01 00:51:54,802 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-01 01:00:50,936 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/core/settings.py changed, reloading. autoreload.py
+2025-11-01 01:00:51,812 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-01 01:01:16,905 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-01 01:01:16,905 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-01 01:01:16,906 INFO users.views Testing info log views.py
+2025-11-01 01:01:16,906 INFO users.views Testing info log views.py
+2025-11-01 15:20:42,468 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-04 17:41:48,484 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 14:51:24,392 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:15:48,296 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-05 15:15:48,296 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-05 15:15:48,297 INFO users.views Testing info log views.py
+2025-11-05 15:15:48,297 INFO users.views Testing info log views.py
+2025-11-05 15:42:16,913 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:42:17,598 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:42:27,579 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:42:28,745 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:42:44,144 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:42:44,763 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:42:52,466 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:42:53,094 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:42:59,708 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:00,352 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:08,991 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:09,667 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:13,392 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:13,963 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:18,869 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:19,556 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:33,370 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:34,196 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:42,686 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:43,337 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:49,774 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:50,383 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:43:58,037 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:43:58,587 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:44:04,421 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-05 15:44:04,983 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 15:44:24,570 INFO users.utils sendpulse response {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 15:44:24,570 INFO users.utils sendpulse response {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 15:44:24,571 ERROR users.utils SendPulse failed to send email: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 15:44:24,571 ERROR users.utils SendPulse failed to send email: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 15:44:24,571 ERROR users.services Failed to send email to eberedaniel241@gmail.com: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} services.py
+2025-11-05 15:44:24,571 ERROR users.services Failed to send email to eberedaniel241@gmail.com: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} services.py
+2025-11-05 15:44:24,571 INFO users.views Testing info log views.py
+2025-11-05 15:44:24,571 INFO users.views Testing info log views.py
+2025-11-05 16:24:00,548 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/core/settings.py changed, reloading. autoreload.py
+2025-11-05 16:48:07,307 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-05 16:48:31,211 INFO users.utils sendpulse response {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 16:48:31,211 INFO users.utils sendpulse response {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 16:48:31,212 ERROR users.utils SendPulse failed to send email: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 16:48:31,212 ERROR users.utils SendPulse failed to send email: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} utils.py
+2025-11-05 16:48:31,213 ERROR users.services Failed to send email to eberedaniel241@gmail.com: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} services.py
+2025-11-05 16:48:31,213 ERROR users.services Failed to send email to eberedaniel241@gmail.com: SendPulse email send failed: {'data': {'is_error': True, 'http_code': 403}} services.py
+2025-11-05 16:48:31,214 INFO users.views Testing info log views.py
+2025-11-05 16:48:31,214 INFO users.views Testing info log views.py
+2025-11-06 16:19:41,959 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:28:49,385 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:28:50,031 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:29:01,821 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:29:02,732 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:29:33,951 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:29:34,648 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:30:09,688 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:30:10,496 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:30:14,420 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:30:15,034 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:01,031 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:32:01,700 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:12,377 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:32:13,096 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:35,962 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:32:36,818 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:40,220 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:32:40,861 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:56,620 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:32:57,300 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:32:59,912 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:33:00,531 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:33:01,855 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:33:02,388 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:35:26,965 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:35:27,689 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:35:38,262 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:35:38,919 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:35:58,809 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:35:59,521 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:36:03,046 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:36:03,604 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:36:05,056 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:36:05,710 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:36:27,573 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:36:28,183 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:38:51,417 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:38:52,049 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:38:54,402 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:38:55,160 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:38:57,762 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:38:58,298 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:39:03,962 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:39:04,541 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:39:23,807 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:39:24,773 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:39:27,140 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 17:39:27,710 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:40:26,282 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:40:26,937 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:40:32,746 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:40:33,649 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:40:35,482 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:40:36,193 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:40:38,602 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:40:39,222 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:41:02,160 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:41:02,798 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:41:38,172 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:41:38,753 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:41:45,799 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:41:46,620 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:41:49,421 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:41:50,052 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:41:53,048 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:41:53,723 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:11,166 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:12,073 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:27,324 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:28,031 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:33,488 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:34,000 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:38,453 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:39,030 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:43,845 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:44,482 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:42:46,015 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:42:46,623 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:02,484 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:03,212 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:20,353 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:21,188 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:28,131 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:28,814 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:41,415 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:42,103 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:44,587 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:45,201 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:46,547 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:47,195 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:51,609 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:52,216 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:53,634 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:54,360 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:43:56,846 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:43:57,444 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:44:00,813 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:44:01,420 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:44:17,525 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:44:18,095 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:44:34,194 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:44:34,872 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:44:52,166 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:44:52,772 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:45:02,727 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:45:03,483 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:45:05,386 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:45:06,375 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:45:07,858 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:45:08,603 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:45:25,809 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:45:26,521 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:46:39,788 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:46:40,742 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:46:45,181 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:46:45,949 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:46:49,861 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:46:50,411 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:46:57,344 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:46:58,089 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:47:00,023 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:47:00,729 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:51:29,927 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:51:30,848 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:51:34,856 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:51:35,819 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:51:42,929 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:51:44,020 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:51:47,339 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:51:48,294 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:57:01,558 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:57:02,125 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:57:06,170 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:57:07,143 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:57:09,084 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:57:10,208 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:57:12,273 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:57:12,834 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:57:17,646 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:57:18,250 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:59:40,385 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:59:41,174 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:59:42,937 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:59:43,577 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:59:46,372 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:59:47,150 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:59:50,021 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:59:50,793 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 17:59:56,693 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 17:59:57,283 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:00:00,241 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:00:00,862 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:00:07,671 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:00:08,243 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:00:16,076 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:00:16,623 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:00:21,405 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:00:22,092 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:02:19,374 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:02:20,204 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:02:25,840 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:02:26,386 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:02:30,361 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:02:30,978 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:02:34,706 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:02:35,473 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:02:38,542 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:02:39,298 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:03:01,923 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:03:02,671 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:03:17,844 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:03:18,466 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:03:26,431 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:03:27,001 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:04:24,583 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:04:25,289 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:04:27,663 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:04:28,345 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:04:47,537 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:04:48,232 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:05:29,913 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:05:29,913 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:05:29,913 INFO users.views Testing info log views.py
+2025-11-06 18:05:29,913 INFO users.views Testing info log views.py
+2025-11-06 18:09:19,457 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:09:20,444 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:09:38,256 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:09:38,256 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:09:38,257 INFO users.views Testing info log views.py
+2025-11-06 18:09:38,257 INFO users.views Testing info log views.py
+2025-11-06 18:15:19,025 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:15:19,889 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:15:22,165 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:15:22,957 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:15:25,403 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:15:26,102 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:15:27,520 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:15:28,270 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:15:30,664 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:15:31,243 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:15:59,883 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:16:00,841 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:16:03,794 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 18:16:04,838 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:16:28,863 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:16:28,863 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 18:16:28,864 INFO users.views Testing info log views.py
+2025-11-06 18:16:28,864 INFO users.views Testing info log views.py
+2025-11-06 18:17:23,454 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:17:24,238 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:17:55,066 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:17:55,949 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:23,708 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:24,375 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:42,713 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:43,737 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:46,054 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:47,011 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:50,624 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:51,311 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:54,713 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:55,496 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:18:58,944 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:18:59,789 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:19:31,513 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:19:31 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a699817dd522b8-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': 'c7fea010-ea43-963a-aa86-1aedbdcb23c9', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:19:31,513 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:19:31 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a699817dd522b8-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': 'c7fea010-ea43-963a-aa86-1aedbdcb23c9', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:19:31,517 INFO users.views Testing info log views.py
+2025-11-06 18:19:31,517 INFO users.views Testing info log views.py
+2025-11-06 18:23:34,075 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:23:34,998 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:23:41,196 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:23:42,052 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:24:11,084 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:24:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6a054bba33c80-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': '19602282-14f5-92e9-b654-cf38a27cd827', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '4', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:24:11,084 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:24:11 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6a054bba33c80-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': '19602282-14f5-92e9-b654-cf38a27cd827', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '4', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:24:11,085 INFO users.views Testing info log views.py
+2025-11-06 18:24:11,085 INFO users.views Testing info log views.py
+2025-11-06 18:26:49,328 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:26:49,950 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:26:56,902 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:26:57,610 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:27:22,181 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:27:22 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6a4ff1f2f046b-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': 'd9923cb4-411b-96dc-acc2-08db84d4d89a', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '1', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:27:22,181 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:27:22 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6a4ff1f2f046b-CDG', 'access-control-allow-credentials': 'true', 'sib-request-id': 'd9923cb4-411b-96dc-acc2-08db84d4d89a', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '1', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:27:22,183 INFO users.views Testing info log views.py
+2025-11-06 18:27:22,183 INFO users.views Testing info log views.py
+2025-11-06 18:34:06,751 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:34:07,542 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:35:09,516 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:35:10,179 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:35:13,993 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:35:14,951 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:35:18,535 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:35:19,131 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:35:43,686 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:35:44,476 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:36:02,349 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:36:03,201 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:36:05,771 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:36:06,348 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:36:11,245 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:36:11,909 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:36:14,271 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:36:15,342 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:39:58,482 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:39:59,272 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:40:03,293 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 18:40:03,829 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 18:42:00,753 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:42:00 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6ba722961f5d9-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': 'a2c7ff49-13ea-975e-8563-10136c98acbb', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '4', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:42:00,753 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 18:42:00 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6ba722961f5d9-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': 'a2c7ff49-13ea-975e-8563-10136c98acbb', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '4', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 18:42:00,755 INFO users.views Testing info log views.py
+2025-11-06 18:42:00,755 INFO users.views Testing info log views.py
+2025-11-06 19:15:49,017 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 19:15:49,707 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 19:17:10,440 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:17:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6edf3acbaf5c3-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': '6a8ae957-af4a-9d88-8970-381b5a779689', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '6', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:17:10,440 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:17:10 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6edf3acbaf5c3-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': '6a8ae957-af4a-9d88-8970-381b5a779689', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '6', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:17:10,443 INFO users.views Testing info log views.py
+2025-11-06 19:17:10,443 INFO users.views Testing info log views.py
+2025-11-06 19:18:36,159 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 19:18:36,836 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 19:18:52,145 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:18:52 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6f06f2da6bf42-WAW', 'access-control-allow-credentials': 'true', 'sib-request-id': '52412b9a-ff77-9f97-a79e-9a233a865662', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:18:52,145 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:18:52 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6f06f2da6bf42-WAW', 'access-control-allow-credentials': 'true', 'sib-request-id': '52412b9a-ff77-9f97-a79e-9a233a865662', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:18:52,147 INFO users.views Testing info log views.py
+2025-11-06 19:18:52,147 INFO users.views Testing info log views.py
+2025-11-06 19:19:27,303 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:19:27 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6f14acbcafb9d-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': 'd3c5689e-1c3a-9439-af86-32904285201b', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:19:27,303 ERROR users.services Failed to send email to eberedaniel241@gmail.com: (401)
+Reason: Unauthorized
+HTTP response headers: HTTPHeaderDict({'Date': 'Thu, 06 Nov 2025 19:19:27 GMT', 'Content-Type': 'application/json', 'Content-Length': '50', 'Connection': 'keep-alive', 'CF-RAY': '99a6f14acbcafb9d-AMS', 'access-control-allow-credentials': 'true', 'sib-request-id': 'd3c5689e-1c3a-9439-af86-32904285201b', 'access-control-allow-origin': '*', 'access-control-allow-headers': '*', 'access-control-allow-methods': 'PUT, POST, GET, DELETE, PATCH, OPTIONS', 'x-envoy-upstream-service-time': '3', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare'})
+HTTP response body: {"message":"Key not found","code":"unauthorized"}
+
+ services.py
+2025-11-06 19:19:27,305 INFO users.views Testing info log views.py
+2025-11-06 19:19:27,305 INFO users.views Testing info log views.py
+2025-11-06 19:35:11,754 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 19:35:12,684 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 19:35:29,837 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 19:35:29,837 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 19:35:29,839 INFO users.views Testing info log views.py
+2025-11-06 19:35:29,839 INFO users.views Testing info log views.py
+2025-11-06 20:05:51,961 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:05:53,500 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:05:56,913 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:05:58,282 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:07:46,128 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:07:47,770 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:07:51,790 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:07:52,939 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:07:57,162 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:07:58,665 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:08:00,199 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:08:01,259 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:08:06,026 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:08:06,810 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:08:10,380 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:08:11,497 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:09:13,508 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:09:14,679 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:10:02,903 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:10:03,683 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:10:11,891 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:10:12,625 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:10:15,042 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:10:15,970 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:10:40,261 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:10:40,974 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:11:44,553 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:11:46,448 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:11:52,047 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:11:53,513 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:12:10,121 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:12:10,892 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:12:34,880 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:12:36,103 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:12:38,895 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:12:39,732 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:12:49,106 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 20:12:49,839 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:13:46,657 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 20:13:46,657 INFO users.services email successfully sent to eberedaniel241@gmail.com services.py
+2025-11-06 20:13:46,658 INFO users.views Testing info log views.py
+2025-11-06 20:13:46,658 INFO users.views Testing info log views.py
+2025-11-06 20:19:13,460 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:19:14,119 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:19:18,532 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:19:19,240 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:19:23,352 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:19:23,950 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:19:56,939 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:19:57,592 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:20:03,894 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:20:04,774 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:20:09,744 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:20:11,013 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 20:20:14,385 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/utils.py changed, reloading. autoreload.py
+2025-11-06 20:20:14,936 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 21:01:49,253 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 21:01:49,939 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2025-11-06 21:01:56,074 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/users/services.py changed, reloading. autoreload.py
+2025-11-06 21:01:56,692 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
