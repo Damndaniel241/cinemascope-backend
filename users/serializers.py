@@ -38,7 +38,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ["id","email","user_name","is_verified","password","password2","user_profile"]
+        fields = ["id","email","user_name","is_active","is_verified","password","password2","user_profile"]
         read_only_fields = ["is_verified"]
         
         
