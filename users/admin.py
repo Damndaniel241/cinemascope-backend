@@ -3,6 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from .models import User,UserProfile
+from .tokens import RefreshTokenStore
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
@@ -25,7 +26,14 @@ class CustomUserAdmin(UserAdmin):
     )
     search_fields = ("email",)
     ordering = ("email",)
+    
 
-
+@admin.register(RefreshTokenStore)
+class RefreshTokenStoreAdmin(admin.ModelAdmin):
+    list_display = ('user', 'created_at', 'expires_at', 'revoked')
+    readonly_fields = ('created_at',)
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(UserProfile)
+
+
+

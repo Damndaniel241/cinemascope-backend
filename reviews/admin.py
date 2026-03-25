@@ -3,7 +3,7 @@ from django.contrib import admin
 
 
 # Register your models here.
-from .models import Review,Movie,Rating
+from .models import Review,Movie,Rating,Watch,Like,WatchList
 
 
 class CustomReviewAdmin(admin.ModelAdmin):
@@ -16,3 +16,6 @@ class CustomMovieAdmin(admin.ModelAdmin):
 admin.site.register(Review,CustomReviewAdmin)
 admin.site.register(Movie, CustomReviewAdmin)
 admin.site.register(Rating)
+admin.site.register(Watch)
+admin.site.register(Like)
+admin.site.register(WatchList)

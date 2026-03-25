@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Review,Movie,Rating
+from .models import Review,Movie,Rating,Watch,Like,WatchList
 from users.serializers import UserProfileSerializer, UserSerializer
 from users.models import User
 
@@ -59,15 +59,54 @@ class RatingSerializer(serializers.ModelSerializer):
     movie = serializers.SlugRelatedField(
     slug_field='movie_id',
     queryset=Movie.objects.all(),
-    required=False
+    required=True
 )   
-    user = UserSerializer(read_only=True,required=False)
-    review = ReviewSerializer(required=False,read_only=True)
+    user = UserSerializer(read_only=True)
+    
     class Meta:
         model = Rating
-        fields = ["id","movie","stars","review","user"]
+        fields = ["id","movie","stars","user"]
+        
+        
+class WatchSerializer(serializers.ModelSerializer):
+    movie = serializers.SlugRelatedField(
+    slug_field='movie_id',
+    queryset=Movie.objects.all(),
+    required=True
+)
+    user = UserSerializer(read_only=True)
     
-    
+    class Meta:
+        model = Watch
+        fields = ["id","movie","user","date_watched"]
+        
 
+        
+class WatchListSerializer(serializers.ModelSerializer):
+    movie = serializers.SlugRelatedField(
+    slug_field='movie_id',
+    queryset=Movie.objects.all(),
+    required=True
+)
+    user = UserSerializer(read_only=True)
+    # added = serializers.BooleanField(required=True)
+    class Meta:
+        model = WatchList
+        fields = ["id","movie","user"]
+    
+    
+    
+class LikeSerializer(serializers.ModelSerializer):
+    movie = serializers.SlugRelatedField(
+    slug_field='movie_id',
+    queryset=Movie.objects.all(),
+    required=True
+)   
+    user = UserSerializer(read_only=True)
+
+
+    class Meta:
+        model = Like
+        fields = ["id","movie","user"]
         
     

@@ -2,9 +2,9 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.decorators import api_view,permission_classes
-from .serializers import ReviewSerializer,RatingSerializer
+from .serializers import ReviewSerializer,RatingSerializer,WatchSerializer,LikeSerializer,WatchListSerializer
 from users.models import User
-from .models import Review,Movie,Rating
+from .models import Review,Movie,Rating,Watch,WatchList,Like
 from django.db.models import Q
 
 
@@ -82,59 +82,137 @@ def delete_review(request,pk):
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
     
     
-@api_view(['POST','PUT'])
+@api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def rate_movie(request):
-    if request.method == "POST":
-        print("this has been seen")
-        try:
-            print("also seen 1")
-            try:
-                print("also seen 2")
-                print("movie= ",request.data["movie"])
-                print("user= ",request.user.id)
-                movie_obj = Movie.objects.get(movie_id=request.data["movie"])
-                
-                
-                    
-            
-                # rating_obj = Rating.objects.filter(Q(movie=request.data["movie"]) , Q(user=request.user.id))
-            except Movie.DoesNotExist:
-                movie_obj = Movie.objects.create(movie_id=request.data["movie"])
-                # movie_obj = Movie.objects.get(movie_id=request.data["movie"])
-            print("also seen 3, movie_obj= ", movie_obj)
-            
-            rating_obj = Rating.objects.filter(movie=movie_obj,user=request.user).exists()
-            print("rating_obj pleaasseee = ",rating_obj)            
-            if rating_obj:
-                Rating.objects.update(stars=request.data["stars"])
-                return Response({"message":"movie rated successfully","data":serializer.data},status=status.HTTP_200_OK)
+    
+    # print("this has been seen")
+    try:
+        # print("also seen 1")
+    
+        movie_obj,created = Movie.objects.get_or_create(movie_id=request.data["movie"])
+
+        # print("also seen 3, movie_obj= ", movie_obj)
+        
+        print("type of request data",type(request.data["stars"]))
+        
+        
+        existing_rating_obj = Rating.objects.filter(movie=movie_obj,user=request.user).first()
+        # print("rating_obj pleaasseee = ",existing_rating_obj)            
+        if existing_rating_obj:
+            if request.data["stars"] == "0":
+                existing_rating_obj.delete()
+                return Response({"message":"zero rating, object deleted"},status=status.HTTP_200_OK)
+            else:
+                serializer = RatingSerializer(existing_rating_obj, data=request.data)
+                if serializer.is_valid(raise_exception=True):
+                    serializer.save()
+                    return Response({"message":"movie rating updated successfully","data":serializer.data},status=status.HTTP_200_OK)
+        elif request.data["stars"] == "0":
+                return Response({"message":"you cannot make a rating of zero"},status=status.HTTP_400_BAD_REQUEST)
+        else:
             
             print("also seen 4")
             serializer = RatingSerializer(data=request.data)
             if serializer.is_valid():
                 serializer.save(user=request.user)
-                return Response({"message":"movie rated successfully","data":serializer.data},status=status.HTTP_200_OK)
-        
-        except Exception as e:
-            return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+                return Response({"message":"movie rated successfully","data":serializer.data},status=status.HTTP_201_CREATED)
+    except KeyError:
+        return Response({"error": "movie field is required"}, status=status.HTTP_400_BAD_REQUEST)
     
-    else:
-        try:
-            movie_obj = Movie.objects.get(movie_id=request.data["movie"])
-            rating_obj = Rating.objects.filter(movie=movie_obj,user=request.user).first()
-            print("rating_obj pleaasseee = ",rating_obj)
-            
-            if rating_obj:
-                serializer = RatingSerializer(rating_obj, data=request.data)
-                if serializer.is_valid(raise_exception=True):
-                    serializer.save()
-                    return Response({"message":"movie rating updated successfully","data":serializer.data},status=status.HTTP_200_OK)
-            
-        except Exception as e:
-            return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
-        
-        
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+
     
     
-    #i'm trying to create property methods for movie model
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def watch_movie(request):
+    try:
+        # try:
+        #     movie_obj = Movie.objects.get(movie_id=request.data["movie"])
+        # except Movie.DoesNotExist:
+        #     movie_obj = Movie.objects.create(movie_id = request.data["movie"])
+        
+        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.data["movie"])
+        
+        existing_watch = Watch.objects.filter(user=request.user,movie=movie_obj).first()
+        
+        if existing_watch:
+            existing_watch.delete()
+            return Response({"message":"you have unwatched this movie"},status=status.HTTP_200_OK)
+        else:
+            watch = Watch.objects.create(movie=movie_obj,user=request.user)
+            serializer = WatchSerializer(watch)
+            return Response({"message":"you have watched this movie","data":serializer.data},status=status.HTTP_201_CREATED)
+        #also works
+        # serializer = WatchSerializer(data=request.data)
+        # if serializer.is_valid():
+        #     serializer.save(user=request.user) 
+        #     return Response({"message":"you have watched this movie","data":serializer.data},status=status.HTTP_201_CREATED)
+        
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def like_movie(request):
+    try:
+        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.data["movie"])
+        
+        print("did movie object show =",movie_obj)
+        
+        existing_like = Like.objects.filter(user=request.user,movie=movie_obj).first()
+        print("did existing like show =",existing_like)
+        
+        if existing_like:
+            existing_like.delete()
+            return Response({"message": "you have unliked this movie"}, status=status.HTTP_200_OK)
+        else:
+            print("did i get here =")
+            like = Like.objects.create(user=request.user,movie=movie_obj)
+            serializer = LikeSerializer(like)
+            return Response({"message": "you have liked this movie", "data": serializer.data}, status=status.HTTP_201_CREATED)
+        
+        #also works
+        # serializer = WatchSerializer(data=request.data)
+        # if serializer.is_valid():
+        #     serializer.save(user=request.user) 
+        #     return Response({"message":"you have liked this movie","data":serializer.data},status=status.HTTP_201_CREATED)
+        
+    except KeyError:
+        return Response({"error": "movie field is required"}, status=status.HTTP_400_BAD_REQUEST)
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_to_watchlist(request):
+    try:
+        movie_obj,created = Movie.objects.get_or_create(movie_id=request.data["movie"])
+        
+        prev_added = WatchList.objects.filter(user=request.user,movie=movie_obj).first()
+        if prev_added:
+            prev_added.delete()
+            return Response({"message":"movie removed from watch list"}, status=status.HTTP_200_OK)
+        else:
+            serializer = WatchListSerializer(data=request.data)
+            if serializer.is_valid():
+                serializer.save(user=request.user) 
+                return Response({"message":"movie added to watchlist","data":serializer.data},status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_movie_user_data(request):
+    try:
+        pass
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
