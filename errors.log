@@ -5626,3 +5626,119 @@ HTTP response body: {"message":"Key not found","code":"unauthorized"}
 2026-04-04 12:34:58,456 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
 2026-04-04 12:34:59,204 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
 2026-04-06 12:08:39,978 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 14:21:04,692 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 15:21:06,833 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 19:36:22,250 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 20:41:47,069 INFO users.services email definitely didn't send services.py
+2026-04-06 20:41:47,069 INFO users.services email definitely didn't send services.py
+2026-04-06 20:41:47,074 WARNING users.views Testing warning log views.py
+2026-04-06 20:41:47,074 WARNING users.views Testing warning log views.py
+2026-04-06 20:41:47,075 ERROR users.views Testing error log views.py
+2026-04-06 20:41:47,075 ERROR users.views Testing error log views.py
+2026-04-06 20:50:37,806 INFO users.services email definitely didn't send services.py
+2026-04-06 20:50:37,806 INFO users.services email definitely didn't send services.py
+2026-04-06 20:50:37,807 WARNING users.views Testing warning log views.py
+2026-04-06 20:50:37,807 WARNING users.views Testing warning log views.py
+2026-04-06 20:50:37,807 ERROR users.views Testing error log views.py
+2026-04-06 20:50:37,807 ERROR users.views Testing error log views.py
+2026-04-06 20:52:06,072 INFO users.services email definitely didn't send services.py
+2026-04-06 20:52:06,072 INFO users.services email definitely didn't send services.py
+2026-04-06 20:52:06,078 WARNING users.views Testing warning log views.py
+2026-04-06 20:52:06,078 WARNING users.views Testing warning log views.py
+2026-04-06 20:52:06,078 ERROR users.views Testing error log views.py
+2026-04-06 20:52:06,078 ERROR users.views Testing error log views.py
+2026-04-06 20:53:36,357 INFO users.services email definitely didn't send services.py
+2026-04-06 20:53:36,357 INFO users.services email definitely didn't send services.py
+2026-04-06 20:53:36,365 WARNING users.views Testing warning log views.py
+2026-04-06 20:53:36,365 WARNING users.views Testing warning log views.py
+2026-04-06 20:53:36,366 ERROR users.views Testing error log views.py
+2026-04-06 20:53:36,366 ERROR users.views Testing error log views.py
+2026-04-06 20:54:43,932 INFO users.services email definitely didn't send services.py
+2026-04-06 20:54:43,932 INFO users.services email definitely didn't send services.py
+2026-04-06 20:54:43,936 WARNING users.views Testing warning log views.py
+2026-04-06 20:54:43,936 WARNING users.views Testing warning log views.py
+2026-04-06 20:54:43,937 ERROR users.views Testing error log views.py
+2026-04-06 20:54:43,937 ERROR users.views Testing error log views.py
+2026-04-06 20:54:52,531 INFO users.services email definitely didn't send services.py
+2026-04-06 20:54:52,531 INFO users.services email definitely didn't send services.py
+2026-04-06 20:54:52,532 WARNING users.views Testing warning log views.py
+2026-04-06 20:54:52,532 WARNING users.views Testing warning log views.py
+2026-04-06 20:54:52,532 ERROR users.views Testing error log views.py
+2026-04-06 20:54:52,532 ERROR users.views Testing error log views.py
+2026-04-06 21:02:45,610 INFO users.services email definitely didn't send services.py
+2026-04-06 21:02:45,610 INFO users.services email definitely didn't send services.py
+2026-04-06 21:02:45,615 WARNING users.views Testing warning log views.py
+2026-04-06 21:02:45,615 WARNING users.views Testing warning log views.py
+2026-04-06 21:02:45,617 ERROR users.views Testing error log views.py
+2026-04-06 21:02:45,617 ERROR users.views Testing error log views.py
+2026-04-06 21:07:24,586 INFO users.services email definitely didn't send services.py
+2026-04-06 21:07:24,586 INFO users.services email definitely didn't send services.py
+2026-04-06 21:07:24,591 WARNING users.views Testing warning log views.py
+2026-04-06 21:07:24,591 WARNING users.views Testing warning log views.py
+2026-04-06 21:07:24,592 ERROR users.views Testing error log views.py
+2026-04-06 21:07:24,592 ERROR users.views Testing error log views.py
+2026-04-06 21:07:35,855 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 21:08:04,886 INFO users.services email definitely didn't send services.py
+2026-04-06 21:08:04,886 INFO users.services email definitely didn't send services.py
+2026-04-06 21:08:04,888 WARNING users.views Testing warning log views.py
+2026-04-06 21:08:04,888 WARNING users.views Testing warning log views.py
+2026-04-06 21:08:04,889 ERROR users.views Testing error log views.py
+2026-04-06 21:08:04,889 ERROR users.views Testing error log views.py
+2026-04-06 21:16:10,522 WARNING urllib3.connectionpool Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x743f61afeea0>: Failed to resolve 'api.brevo.com' ([Errno -3] Temporary failure in name resolution)")': /v3/smtp/email connectionpool.py
+2026-04-06 21:16:27,206 INFO users.services email definitely didn't send services.py
+2026-04-06 21:16:27,206 INFO users.services email definitely didn't send services.py
+2026-04-06 21:16:27,352 WARNING users.views Testing warning log views.py
+2026-04-06 21:16:27,352 WARNING users.views Testing warning log views.py
+2026-04-06 21:16:27,352 ERROR users.views Testing error log views.py
+2026-04-06 21:16:27,352 ERROR users.views Testing error log views.py
+2026-04-06 22:38:19,370 INFO users.services email definitely didn't send services.py
+2026-04-06 22:38:19,370 INFO users.services email definitely didn't send services.py
+2026-04-06 22:38:19,372 WARNING users.views Testing warning log views.py
+2026-04-06 22:38:19,372 WARNING users.views Testing warning log views.py
+2026-04-06 22:38:19,373 ERROR users.views Testing error log views.py
+2026-04-06 22:38:19,373 ERROR users.views Testing error log views.py
+2026-04-06 22:39:19,817 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 22:39:37,505 INFO users.services email definitely didn't send services.py
+2026-04-06 22:39:37,505 INFO users.services email definitely didn't send services.py
+2026-04-06 22:39:37,507 WARNING users.views Testing warning log views.py
+2026-04-06 22:39:37,507 WARNING users.views Testing warning log views.py
+2026-04-06 22:39:37,507 ERROR users.views Testing error log views.py
+2026-04-06 22:39:37,507 ERROR users.views Testing error log views.py
+2026-04-06 22:42:10,876 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 22:42:23,432 INFO users.services email definitely didn't send services.py
+2026-04-06 22:42:23,432 INFO users.services email definitely didn't send services.py
+2026-04-06 22:42:23,434 WARNING users.views Testing warning log views.py
+2026-04-06 22:42:23,434 WARNING users.views Testing warning log views.py
+2026-04-06 22:42:23,435 ERROR users.views Testing error log views.py
+2026-04-06 22:42:23,435 ERROR users.views Testing error log views.py
+2026-04-06 22:42:37,139 INFO users.services email definitely didn't send services.py
+2026-04-06 22:42:37,139 INFO users.services email definitely didn't send services.py
+2026-04-06 22:42:37,140 WARNING users.views Testing warning log views.py
+2026-04-06 22:42:37,140 WARNING users.views Testing warning log views.py
+2026-04-06 22:42:37,140 ERROR users.views Testing error log views.py
+2026-04-06 22:42:37,140 ERROR users.views Testing error log views.py
+2026-04-06 22:51:20,400 INFO users.services email definitely didn't send services.py
+2026-04-06 22:51:20,400 INFO users.services email definitely didn't send services.py
+2026-04-06 22:51:20,405 WARNING users.views Testing warning log views.py
+2026-04-06 22:51:20,405 WARNING users.views Testing warning log views.py
+2026-04-06 22:51:20,405 ERROR users.views Testing error log views.py
+2026-04-06 22:51:20,405 ERROR users.views Testing error log views.py
+2026-04-06 23:01:52,614 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 23:02:34,412 INFO users.services email definitely didn't send services.py
+2026-04-06 23:02:34,412 INFO users.services email definitely didn't send services.py
+2026-04-06 23:02:34,416 WARNING users.views Testing warning log views.py
+2026-04-06 23:02:34,416 WARNING users.views Testing warning log views.py
+2026-04-06 23:02:34,417 ERROR users.views Testing error log views.py
+2026-04-06 23:02:34,417 ERROR users.views Testing error log views.py
+2026-04-06 23:05:49,972 INFO users.services email definitely didn't send services.py
+2026-04-06 23:05:49,972 INFO users.services email definitely didn't send services.py
+2026-04-06 23:05:49,977 WARNING users.views Testing warning log views.py
+2026-04-06 23:05:49,977 WARNING users.views Testing warning log views.py
+2026-04-06 23:05:49,978 ERROR users.views Testing error log views.py
+2026-04-06 23:05:49,978 ERROR users.views Testing error log views.py
+2026-04-06 23:05:56,824 INFO users.services email definitely didn't send services.py
+2026-04-06 23:05:56,824 INFO users.services email definitely didn't send services.py
+2026-04-06 23:05:56,827 WARNING users.views Testing warning log views.py
+2026-04-06 23:05:56,827 WARNING users.views Testing warning log views.py
+2026-04-06 23:05:56,828 ERROR users.views Testing error log views.py
+2026-04-06 23:05:56,828 ERROR users.views Testing error log views.py
