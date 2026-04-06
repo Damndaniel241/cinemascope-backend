@@ -1,4 +1,4 @@
-from .views import create_review,get_review,delete_review,update_review,rate_movie,watch_movie,like_movie,add_to_watchlist
+from .views import create_review,get_review,delete_review,update_review,rate_movie,watch_movie,like_movie,add_to_watchlist,get_movie_user_data
 from django.urls import path
 
 urlpatterns=[
@@ -9,6 +9,6 @@ urlpatterns=[
     path('rate/',rate_movie),
     path('watch/',watch_movie),
     path('like/',like_movie),
-    path('add-to-watchlist/',add_to_watchlist)
-    
+    path('add-to-watchlist/',add_to_watchlist),
+    path('movie-user-data/',get_movie_user_data)
 ]

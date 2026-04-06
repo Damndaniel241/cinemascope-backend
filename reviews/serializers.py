@@ -22,7 +22,7 @@ class UserReviewSerializer(serializers.ModelSerializer):
 
 class ReviewSerializer(serializers.ModelSerializer):
     # user = UserReviewSerializer(read_only=True)
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
     # movie = serializers.CharField(max_length=20)
     # movie = serializers.PrimaryKeyRelatedField(queryset=Movie.objects.all())
     movie= serializers.SlugRelatedField(
@@ -35,7 +35,7 @@ class ReviewSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Review
-        fields = ["id","movie","user","created_at","content"]
+        fields = ["id","movie","created_at","content"]
         
     
     def create(self,validated_data):
@@ -61,11 +61,11 @@ class RatingSerializer(serializers.ModelSerializer):
     queryset=Movie.objects.all(),
     required=True
 )   
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
     
     class Meta:
         model = Rating
-        fields = ["id","movie","stars","user"]
+        fields = ["id","movie","stars"]
         
         
 class WatchSerializer(serializers.ModelSerializer):
@@ -74,11 +74,11 @@ class WatchSerializer(serializers.ModelSerializer):
     queryset=Movie.objects.all(),
     required=True
 )
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
     
     class Meta:
         model = Watch
-        fields = ["id","movie","user","date_watched"]
+        fields = ["id","movie","date_watched"]
         
 
         
@@ -88,11 +88,11 @@ class WatchListSerializer(serializers.ModelSerializer):
     queryset=Movie.objects.all(),
     required=True
 )
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
     # added = serializers.BooleanField(required=True)
     class Meta:
         model = WatchList
-        fields = ["id","movie","user"]
+        fields = ["id","movie"]
     
     
     

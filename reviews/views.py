@@ -29,6 +29,7 @@ def create_review(request):
         print("serializer = ",serializer)
         if serializer.is_valid(raise_exception=True):
             print("i got here")
+            Watch.objects.create(movie=movie_obj,user=request.user)
             serializer.save(user=request.user)
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return Response({"message":serializer.errors},status=status.HTTP_400_BAD_REQUEST)
@@ -114,6 +115,7 @@ def rate_movie(request):
             
             print("also seen 4")
             serializer = RatingSerializer(data=request.data)
+            Watch.objects.create(movie=movie_obj,user=request.user)
             if serializer.is_valid():
                 serializer.save(user=request.user)
                 return Response({"message":"movie rated successfully","data":serializer.data},status=status.HTTP_201_CREATED)
@@ -213,6 +215,31 @@ def add_to_watchlist(request):
 @permission_classes([IsAuthenticated])
 def get_movie_user_data(request):
     try:
-        pass
+        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.data["movie"])
+        
+        review_obj = Review.objects.filter(user=request.user,movie=movie_obj).first()
+        rating_obj = Rating.objects.filter(user=request.user,movie=movie_obj).first()
+        watch_obj = Watch.objects.filter(user=request.user,movie=movie_obj).first()
+        watch_list_obj = WatchList.objects.filter(user=request.user,movie=movie_obj).first()
+        
+        
+        review_obj_serializer = ReviewSerializer(review_obj)
+        rating_obj_serializer = RatingSerializer(rating_obj)
+        watch_obj_serializer = WatchSerializer(watch_obj)
+        watch_list_obj_serializer = WatchListSerializer(watch_list_obj)
+        
+        
+        return Response({
+                         "data": {
+                                "review":review_obj_serializer.data,
+                                "rating":rating_obj_serializer.data,
+                                "watched":watch_obj_serializer.data,
+                                "added_to_watchlist":watch_list_obj_serializer.data
+                             }},
+                        status=status.HTTP_200_OK
+                        )
+        
+        
+        
     except Exception as e:
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)

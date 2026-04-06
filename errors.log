@@ -5348,3 +5348,281 @@ HTTP response body: {"message":"Key not found","code":"unauthorized"}
 2026-03-25 14:01:48,919 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
 2026-03-25 14:02:35,530 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
 2026-03-25 14:02:36,327 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:21,727 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:22:22,923 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:26,609 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:22:27,207 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:43,177 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:22:43,747 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:51,469 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:22:52,204 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:56,888 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:22:57,487 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:22:59,186 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:23:00,280 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:02,341 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/urls.py changed, reloading. autoreload.py
+2026-03-25 14:23:03,168 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:17,600 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:23:18,381 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:29,209 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:23:30,559 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:33,089 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:23:33,694 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:40,762 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:23:41,491 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:23:55,387 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:23:56,169 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:24:11,392 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:24:12,399 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:24:16,530 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:24:17,403 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:24:19,477 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:24:20,090 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:24:25,796 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:24:26,776 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:24:29,295 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:24:29,938 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:25:35,012 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:25:35,736 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:25:37,827 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:25:38,540 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:25:43,383 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:25:44,672 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:25:51,619 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:25:52,314 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:26:03,155 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:26:03,996 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:26:07,407 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:26:08,113 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 14:26:11,023 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 14:26:11,746 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:14:58,148 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:14:58,810 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:15:04,524 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:15:05,656 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:15:09,023 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:15:09,851 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:06,560 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:07,986 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:13,771 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:14,325 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:21,038 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:21,651 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:34,701 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:35,453 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:39,086 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:39,878 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:43,921 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:44,639 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:45:52,319 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:45:52,878 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:19,655 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:20,788 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:23,276 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:24,042 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:26,237 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:26,989 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:38,921 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:40,054 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:44,664 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:45,455 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:48,528 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:46:49,451 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:46:59,343 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:00,025 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:03,146 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:03,908 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:06,091 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:06,885 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:10,882 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:11,674 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:20,861 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:21,551 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:26,572 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:27,486 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:30,528 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:31,200 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:35,104 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:35,656 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:47:38,637 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:47:39,285 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:48:12,093 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:48:13,190 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:48:18,386 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:48:19,112 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:48:24,317 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:48:24,992 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:56:56,012 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:56:56,868 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:57:01,015 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:57:01,816 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:57:09,993 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:57:11,149 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:57:13,376 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:57:14,071 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:57:17,829 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:57:18,415 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:57:40,843 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:57:41,523 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:58:12,211 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:58:12,961 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:58:29,192 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:58:29,883 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:58:32,626 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:58:33,433 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:58:35,530 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:58:36,134 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:05,828 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:06,425 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:17,208 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:18,554 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:24,709 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:25,270 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:27,542 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:28,403 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:32,408 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:33,151 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:43,580 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:44,669 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:48,031 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:48,975 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:51,302 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:52,391 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 15:59:55,507 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 15:59:56,557 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:02,765 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:03,911 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:07,087 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:07,742 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:10,615 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:11,672 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:14,000 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:14,871 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:16,962 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:17,910 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:20,264 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:21,079 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:25,110 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:25,796 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:29,909 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:30,454 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:00:48,729 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:00:49,508 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:16,194 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:17,056 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:20,181 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:20,767 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:25,736 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:26,501 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:34,647 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:35,356 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:45,275 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:45,886 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:01:52,911 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:01:53,764 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:00,926 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:01,836 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:05,413 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:06,344 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:08,629 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:09,380 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:13,147 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:13,879 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:22,839 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:23,979 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:26,076 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:26,774 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:31,288 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:32,201 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:34,634 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:35,988 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:39,482 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:40,745 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:02:53,146 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:02:53,889 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:02,654 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:03,873 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:15,348 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:16,380 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:19,632 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:20,829 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:25,106 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:25,836 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:29,611 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:30,210 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:37,878 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:38,741 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:40,936 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:42,456 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:50,797 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:51,404 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:03:57,306 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:03:58,073 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:04:08,113 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:04:09,091 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:04:11,354 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:04:12,184 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:04:24,521 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:04:25,393 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:04:30,783 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:04:31,440 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:14:48,787 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/serializers.py changed, reloading. autoreload.py
+2026-03-25 16:14:49,468 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:14:54,621 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/serializers.py changed, reloading. autoreload.py
+2026-03-25 16:14:55,212 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:15:01,214 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/serializers.py changed, reloading. autoreload.py
+2026-03-25 16:15:02,122 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:15:04,604 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/serializers.py changed, reloading. autoreload.py
+2026-03-25 16:15:05,360 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:15:59,104 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:18:12,906 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:18:13,906 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-25 16:18:16,457 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-25 16:18:17,280 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-26 09:21:22,609 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-26 09:49:16,777 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 13:23:32,352 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 13:25:48,050 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 17:34:21,712 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:51:20,643 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:51:21,411 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:51:31,434 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:51:32,141 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:51:36,111 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:51:36,783 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:51:42,422 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:51:43,164 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:51:50,286 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:51:51,124 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:52:53,163 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:52:53,760 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:52:55,646 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:52:56,433 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:53:25,411 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:53:26,211 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:53:30,348 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:53:31,137 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:53:33,956 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:53:34,769 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:53:40,732 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:53:41,586 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 18:54:05,353 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-03-27 18:54:06,110 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-27 20:13:40,790 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-30 10:49:36,936 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-30 12:45:08,015 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-03-30 12:48:28,009 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-02 08:43:16,891 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-03 08:25:16,524 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-03 08:36:35,805 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-03 12:41:10,494 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-03 16:03:35,762 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-03 16:25:36,989 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-04 08:19:21,429 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-04 12:34:51,656 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-04-04 12:34:52,306 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-04 12:34:54,770 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-04-04 12:34:55,768 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-04 12:34:58,456 INFO django.utils.autoreload /home/damndaniel/Documents/be-projects/cinemascope-backend/reviews/views.py changed, reloading. autoreload.py
+2026-04-04 12:34:59,204 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
+2026-04-06 12:08:39,978 INFO django.utils.autoreload Watching for file changes with StatReloader autoreload.py
