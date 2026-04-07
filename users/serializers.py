@@ -47,7 +47,7 @@ class UserSerializer(serializers.ModelSerializer):
         password2 = attrs.pop("password2")
         
         if password != password2:
-            return serializers.ValidationError({ "password": "Password fields didn't match." })
+            raise serializers.ValidationError({ "password": "Password fields didn't match." })
         return attrs
     
     def validate_user_name(self,value):
@@ -77,8 +77,8 @@ class LoginSerializer(serializers.Serializer):
     
     def validate(self,data):
         user = authenticate(**data)
-        if user is not None:
-            serializers.ValidationError({"error":"invalid credentials"})
+        if user is None:
+            raise serializers.ValidationError({"error":"invalid credentials"})
         return data
     
     

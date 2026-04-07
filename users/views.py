@@ -88,7 +88,10 @@ def signin(request):
                 hashed_ref_token = bcrypt.hashpw(encoded_ref_token,bcrypt.gensalt(12))
                 RefreshTokenStore.objects.create(user=user,token=hashed_ref_token,token_index=token_index, expires_at=timezone.now() + timedelta(days=7))
                 response = Response({"message":"successful","data":data},status=status.HTTP_200_OK)
-                response.set_cookie(key="refresh_token",value=str(refresh),httponly=True,secure=True,samesite="Lax")
+                if request.data['remember'] == True:
+                    response.set_cookie(key="refresh_token",value=str(refresh),httponly=True,secure=True,samesite="Lax",max_age=60 * 60 * 24 * 7)
+                else:
+                    response.set_cookie(key="refresh_token",value=str(refresh),httponly=True,secure=True,samesite="Lax")
                 return response
                 # return Response({"message":"successful","data":data},status=status.HTTP_200_OK)
             else:
