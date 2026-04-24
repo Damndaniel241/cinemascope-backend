@@ -2,14 +2,8 @@ from rest_framework import serializers
 from .models import Review,Movie,Rating,Watch,Like,WatchList
 from users.serializers import UserProfileSerializer, UserSerializer
 from users.models import User
+from .review_comment import ReviewComment
 
-
-class MovieSerializer(serializers.ModelSerializer):
-    # movie_id = serializers.CharField(max_length=20)
-    
-    class Meta:
-        model=Movie
-        fields = ["movie_id"]
         
     # def get_ra    
     
@@ -20,34 +14,7 @@ class UserReviewSerializer(serializers.ModelSerializer):
         
 
 
-class ReviewSerializer(serializers.ModelSerializer):
-    # user = UserReviewSerializer(read_only=True)
-    # user = UserSerializer(read_only=True)
-    # movie = serializers.CharField(max_length=20)
-    # movie = serializers.PrimaryKeyRelatedField(queryset=Movie.objects.all())
-    movie= serializers.SlugRelatedField(
-    slug_field='movie_id',
-    queryset=Movie.objects.all(),
-    required=False
-)   
-    # rating = serializers.SerializerMethodField()
-    
-    
-    class Meta:
-        model = Review
-        fields = ["id","movie","created_at","content"]
-        
-    
-    def create(self,validated_data):
-        instance = Review.objects.create(**validated_data)
-        print("serializer instance = ",instance)
-        return instance
-    
-    
-    def update(self,instance,validated_data):
-        instance.content = validated_data.get("content",instance.content)
-        instance.save()
-        return instance
+
     
     # def get_rating(self,obj):
     #     user_instance = obj.movie_ratings.all()
@@ -102,11 +69,117 @@ class LikeSerializer(serializers.ModelSerializer):
     queryset=Movie.objects.all(),
     required=True
 )   
-    user = UserSerializer(read_only=True)
+    # user = UserSerializer(read_only=True)
 
 
     class Meta:
         model = Like
-        fields = ["id","movie","user"]
+        fields = ["id","movie"]
         
     
+# class PlatformMovieDataSerializer(serializers.Serializer):
+#     reviews = ReviewSerializer()
+#     # watches = WatchSerializer()
+    
+    
+    
+#     class Meta:
+#         fields = ["reviews"]
+#     # "reviews":review_obj_serializer.data,
+#                                 # "rating":rating_obj_serializer.data,
+#                                 # "watched":watch_obj_serializer.data,
+#                                 # "added_to_watchlist":watch_list_obj_serializer.data
+                                
+                                
+class ReviewCommentSerializer(serializers.ModelSerializer):
+    review = serializers.SlugRelatedField(slug_field="id",queryset=Review.objects.all(),required=True)
+    user = UserSerializer(read_only=True)
+    
+    class Meta:
+        model = ReviewComment
+        fields = ["id","user","review","created_at","content"] 
+    
+
+
+class ReviewSerializer(serializers.ModelSerializer):
+    
+    movie= serializers.SlugRelatedField(
+    slug_field='movie_id',
+    queryset=Movie.objects.all(),
+    required=False
+)   
+    
+    # watched = WatchSerializer(read_only=True)
+    # watched = serializers.SerializerMethodField("get_watch_status")
+    user = UserSerializer(read_only=True)
+    
+    comments = ReviewCommentSerializer(many=True,read_only=True)
+    comments_count = serializers.SerializerMethodField()
+    likes_count = serializers.SerializerMethodField()
+ 
+    
+    rating = serializers.SerializerMethodField()
+    liked = serializers.SerializerMethodField()
+    watched = serializers.SerializerMethodField()
+    watchlisted = serializers.SerializerMethodField()
+    
+    def get_comments_count(self,obj):
+        return obj.comments.all().count()
+    
+    def get_likes_count(self,obj):
+        return obj.review_likes.all().count()
+
+    
+    def get_rating(self, obj):
+        rating = Rating.objects.filter(user=obj.user, movie=obj.movie).first()
+        return RatingSerializer(rating).data if rating else None
+
+    def get_liked(self, obj):
+        like = Like.objects.filter(user=obj.user, movie=obj.movie).first()
+        return LikeSerializer(like).data if like else None
+
+    def get_watched(self, obj):
+        watch = Watch.objects.filter(user=obj.user, movie=obj.movie).first()
+        return WatchSerializer(watch).data if watch else None
+
+    def get_watchlisted(self, obj):
+        watchlist = WatchList.objects.filter(user=obj.user, movie=obj.movie).first()
+        return WatchListSerializer(watchlist).data if watchlist else None
+    
+    
+
+    class Meta:
+        model = Review
+        fields = ["id","user","movie","created_at","content","comments","comments_count", "rating", "liked","watched","watchlisted","likes_count"]
+        
+    
+    def create(self,validated_data):
+        instance = Review.objects.create(**validated_data)
+        print("serializer instance = ",instance)
+        return instance
+    
+    
+    def update(self,instance,validated_data):
+        instance.content = validated_data.get("content",instance.content)
+        instance.save()
+        return instance
+
+class UserMovieDataSerializer(serializers.Serializer):
+    review = serializers.SerializerMethodField()
+    # watched = serializers.SerializerMethodField()
+    # liked = serializers.SerializerMethodField()
+    # watchlisted = serializers.SerializerMethodField()
+    # rating = serializers.SerializerMethodField()
+    
+    def get_review(self,obj):
+        return ReviewSerializer(obj.reviews)
+    
+    
+
+class MovieSerializer(serializers.ModelSerializer):
+
+    
+    reviews = ReviewSerializer(many=True,read_only=True)
+    class Meta:
+        model=Movie
+        fields = ["movie_id","reviews"]

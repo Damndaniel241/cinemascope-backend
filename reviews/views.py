@@ -2,10 +2,11 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.decorators import api_view,permission_classes
-from .serializers import ReviewSerializer,RatingSerializer,WatchSerializer,LikeSerializer,WatchListSerializer
+from .serializers import ReviewSerializer,RatingSerializer,WatchSerializer,LikeSerializer,WatchListSerializer,MovieSerializer,ReviewCommentSerializer,UserMovieDataSerializer
 from users.models import User
 from .models import Review,Movie,Rating,Watch,WatchList,Like
 from django.db.models import Q
+from .review_comment import ReviewComment
 
 
 
@@ -215,31 +216,102 @@ def add_to_watchlist(request):
 @permission_classes([IsAuthenticated])
 def get_movie_user_data(request):
     try:
-        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.data["movie"])
+        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.query_params.get('movie'))
         
         review_obj = Review.objects.filter(user=request.user,movie=movie_obj).first()
         rating_obj = Rating.objects.filter(user=request.user,movie=movie_obj).first()
         watch_obj = Watch.objects.filter(user=request.user,movie=movie_obj).first()
         watch_list_obj = WatchList.objects.filter(user=request.user,movie=movie_obj).first()
+        like_obj = Like.objects.filter(user=request.user,movie=movie_obj).first()
         
         
         review_obj_serializer = ReviewSerializer(review_obj)
         rating_obj_serializer = RatingSerializer(rating_obj)
         watch_obj_serializer = WatchSerializer(watch_obj)
         watch_list_obj_serializer = WatchListSerializer(watch_list_obj)
+        like_obj_serializer = LikeSerializer(like_obj)
+        
+        # review_data = dict(review_obj_serializer.data)
+        # review_data["comments"] = ReviewCommentSerializer(ReviewComment.objects.filter(review=36).all(),many=True).data
         
         
         return Response({
                          "data": {
                                 "review":review_obj_serializer.data,
-                                "rating":rating_obj_serializer.data,
                                 "watched":watch_obj_serializer.data,
-                                "added_to_watchlist":watch_list_obj_serializer.data
+                                "liked":like_obj_serializer.data,
+                                "added_to_watchlist":watch_list_obj_serializer.data,
+                                "rating":rating_obj_serializer.data,
                              }},
                         status=status.HTTP_200_OK
                         )
         
         
         
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def comment_review(request):
+    try:
+        review_id = request.data['review']
+        try:
+            review_obj = Review.objects.get(id=review_id)
+        except Review.DoesNotExist:
+            return Response({"message":"resource not found"},status=status.HTTP_404_NOT_FOUND)
+        
+        serializer = ReviewCommentSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(user=request.user)
+            return Response({"message":"you have commented on this review","data":serializer.data},status=status.HTTP_201_CREATED)
+            
+        
+        
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+  
+  
+
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def retreive_plat_movie_data(request):
+    try:
+        movie_obj,_ = Movie.objects.get_or_create(movie_id=request.query_params.get('movie'))
+        # review_objs = Review.objects.filter(movie=movie_obj).all()
+        print("i reached here")
+        
+        # review_obj_serializer = PlatformMovieDataSerializer(movie_obj,many=True)
+        review_obj_serializer = MovieSerializer(movie_obj)
+        print("i reached here 2")
+        
+        return Response({
+                    "data": {
+                        "reviews":review_obj_serializer.data,
+                        }},
+                status=status.HTTP_200_OK
+                )
+        
+        
+        
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def test_user_movie_data(request):
+    try:
+        movie_obj = Movie.objects.get(movie_id=request.query_params.get('movie'))
+
+        # review_obj_serializer = UserMovieDataSerializer(movie_obj)
+        # return Response({
+        #             "data": {
+        #                 "reviews":review_obj_serializer.data,
+        #                 }},
+        #         status=status.HTTP_200_OK
+        #         )
     except Exception as e:
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)

@@ -96,9 +96,13 @@ class WatchList(models.Model):
             return f"{self.user.user_name} added {self.movie} to watchlist"
         else:
             return f"Deleted User added {self.movie} to watchlist"
-        
-    
-    
     
     class Meta:
         constraints = [UniqueConstraint(fields=['movie','user'], name="unique_user_movie_watchlist")]
+        
+        
+        
+
+
+from .review_comment import ReviewComment
+from .review_like import ReviewLike
