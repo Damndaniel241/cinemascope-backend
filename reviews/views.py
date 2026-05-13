@@ -2,11 +2,13 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated,AllowAny
 from rest_framework.decorators import api_view,permission_classes
-from .serializers import ReviewSerializer,RatingSerializer,WatchSerializer,LikeSerializer,WatchListSerializer,MovieSerializer,ReviewCommentSerializer,UserMovieDataSerializer
+from .serializers import ReviewSerializer,RatingSerializer,WatchSerializer,LikeSerializer,WatchListSerializer,MovieSerializer,ReviewCommentSerializer,UserMovieDataSerializer,ReviewLikeSerializer
 from users.models import User
 from .models import Review,Movie,Rating,Watch,WatchList,Like
 from django.db.models import Q
 from .review_comment import ReviewComment
+from .review_like import ReviewLike
+from rest_framework.generics import get_object_or_404
 
 
 
@@ -30,7 +32,8 @@ def create_review(request):
         print("serializer = ",serializer)
         if serializer.is_valid(raise_exception=True):
             print("i got here")
-            Watch.objects.create(movie=movie_obj,user=request.user)
+            if Watch.objects.filter(movie=movie_obj,user=request.user) is None:
+                Watch.objects.create(movie=movie_obj,user=request.user)
             serializer.save(user=request.user)
             return Response(serializer.data,status=status.HTTP_201_CREATED)
         return Response({"message":serializer.errors},status=status.HTTP_400_BAD_REQUEST)
@@ -252,6 +255,23 @@ def get_movie_user_data(request):
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
     
     
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def get_review_user_data(request):
+    try:
+        review_obj = get_object_or_404(Review,id=request.query_params.get('review_id'))
+        print("did you get my object = ",review_obj.id)
+        if review_obj:
+            review_like_obj = ReviewLike.objects.filter(review=review_obj.id,user=request.user).first()
+            print("did you get my review like object = ",review_like_obj)
+            serializer = ReviewLikeSerializer(review_like_obj)
+            return Response({"data":serializer.data}, status=status.HTTP_200_OK)
+        # return Response({"error":serializer.errors})
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+    
     
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
@@ -272,6 +292,30 @@ def comment_review(request):
         
     except Exception as e:
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def like_review(request):
+    try:
+        review_id = request.data['review']
+        review_obj = Review.objects.get(id=review_id)
+        existing_review_like = ReviewLike.objects.filter(review=review_obj,user=request.user).first()
+        if existing_review_like:
+            existing_review_like.delete()
+            return Response({"message": "you have unliked this review"}, status=status.HTTP_200_OK)
+        else:
+            # new_review_like = ReviewLike.objects.create(user=request.user,review=review_obj)
+            # print("nigga i got here",new_review_like)
+            serializer = ReviewLikeSerializer(data = request.data)
+            if serializer.is_valid():
+                serializer.save(user=request.user)
+                return Response({"message": "you have liked this review"}, status=status.HTTP_201_CREATED)
+            return Response({"message": "something wromg liking this review", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+            
+        
+    except Exception as e:
+        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
   
   
 
