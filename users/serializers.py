@@ -82,3 +82,27 @@ class LoginSerializer(serializers.Serializer):
         return data
     
     
+class ChangePasswordSerializer(serializers.Serializer):
+    old_password = serializers.CharField(write_only=True,required=True,validators=[validate_password])
+    new_password = serializers.CharField(write_only=True,required=True)
+    new_password_confirm = serializers.CharField(write_only=True,required=True)
+    
+    def validate(self, attrs):
+        old_password = attrs.get('old_password')
+        new_password = attrs.get('new_password')
+        new_password_confirm = attrs.get('new_password_confirm')
+        
+        
+        if new_password != new_password_confirm:
+            raise serializers.ValidationError({ "password": "Password fields didn't match." })
+        elif old_password == new_password:
+            raise serializers.ValidationError({ "password": "new Password can't be same as old." })
+        return attrs
+    
+    
+    def update(self, instance, validated_data):
+        # request = self
+        instance.password =validated_data.get('new_password',instance.password)
+        instance.set_password(instance.password)
+        instance.save()
+        return instance

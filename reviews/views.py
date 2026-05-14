@@ -9,7 +9,8 @@ from django.db.models import Q
 from .review_comment import ReviewComment
 from .review_like import ReviewLike
 from rest_framework.generics import get_object_or_404
-
+from django.http import Http404
+from reviews.decorators import owns_resource_only
 
 
 @api_view(['POST'])
@@ -72,6 +73,7 @@ def update_review(request,pk):
     
 @api_view(['DELETE'])
 @permission_classes([IsAuthenticated])
+@owns_resource_only(Review)
 def delete_review(request,pk):
     try:
         try:
@@ -221,14 +223,14 @@ def get_movie_user_data(request):
     try:
         movie_obj,_ = Movie.objects.get_or_create(movie_id=request.query_params.get('movie'))
         
-        review_obj = Review.objects.filter(user=request.user,movie=movie_obj).first()
+        review_obj = Review.objects.filter(user=request.user,movie=movie_obj)
         rating_obj = Rating.objects.filter(user=request.user,movie=movie_obj).first()
         watch_obj = Watch.objects.filter(user=request.user,movie=movie_obj).first()
         watch_list_obj = WatchList.objects.filter(user=request.user,movie=movie_obj).first()
         like_obj = Like.objects.filter(user=request.user,movie=movie_obj).first()
         
         
-        review_obj_serializer = ReviewSerializer(review_obj)
+        review_obj_serializer = ReviewSerializer(review_obj,many=True)
         rating_obj_serializer = RatingSerializer(rating_obj)
         watch_obj_serializer = WatchSerializer(watch_obj)
         watch_list_obj_serializer = WatchListSerializer(watch_list_obj)
@@ -267,6 +269,11 @@ def get_review_user_data(request):
             serializer = ReviewLikeSerializer(review_like_obj)
             return Response({"data":serializer.data}, status=status.HTTP_200_OK)
         # return Response({"error":serializer.errors})
+        
+    except Http404:
+        # Explicitly capture the 404 error and return a 404 status code
+        return Response({"error": "No Review matches the given query."}, status=status.HTTP_404_NOT_FOUND)
+        
     except Exception as e:
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
     
@@ -292,6 +299,38 @@ def comment_review(request):
         
     except Exception as e:
         return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+    
+    
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def edit_comment_review(request,pk):
+        try:
+            existing_comment_obj = ReviewComment.objects.filter(pk=pk).first()
+            serializer = ReviewCommentSerializer(existing_comment_obj,data=request.data,partial=True, context={'request':request})
+            if serializer.is_valid(raise_exception=True):
+                serializer.save(user=request.user)
+                return Response({"message":"comment updated successfully","data":serializer.data},status=status.HTTP_200_OK)
+        except ReviewComment.DoesNotExist:
+            return Response({"message":"resource not found"},status=status.HTTP_404_NOT_FOUND)
+            
+        except Exception as e:
+            return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+        
+@api_view(['DELETE'])
+@permission_classes([IsAuthenticated])
+@owns_resource_only(ReviewComment)
+def delete_comment_review(request,pk):
+    try:
+        try:
+            comment_obj = ReviewComment.objects.filter(pk=pk).first()
+            if comment_obj:
+                comment_obj.delete()
+            return Response({"message":"review comment deleted successfully"},status=status.HTTP_204_NO_CONTENT)
+        except Review.DoesNotExist:
+            return Response({"message":"object doesn't exist"},status=status.HTTP_404_NOT_FOUND) 
+    except Exception as e:
+            return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+
     
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])

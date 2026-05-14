@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework.decorators import api_view,permission_classes
 from rest_framework.permissions import IsAuthenticated,AllowAny
-from .serializers import UserSerializer,LoginSerializer
+from .serializers import UserSerializer,LoginSerializer,ChangePasswordSerializer
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
 # from rest_framework_simplejwt.token_blacklist import OutstandingToken,BlacklistedToken
@@ -247,8 +247,28 @@ def logout(request):
         return Response({"message":"something went wrong"}, status=status.HTTP_400_BAD_REQUEST)
         
     
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def change_password(request):
+    try:
+        data =request.data
+        user = request.user
+        print("user_is_active",user.is_active)
+        print("user_is_blacklisted",user.is_blacklisted)
+        if user.is_active and not user.is_blacklisted:
+            print("Inside the block!") # Add a print here to be SURE
+            serializer = ChangePasswordSerializer(request.user,data)
+            if serializer.is_valid():
+                serializer.save(raise_exception = True)
+                return Response({"message":"password successfully updated"},status=status.HTTP_200_OK)
+            return Response({"error":serializer.errors},status=status.HTTP_400_BAD_REQUEST)
+        return Response({"message": "You are forbidden"},
+                    status=status.HTTP_403_FORBIDDEN # Use 403 for Permission issues
+                )
+    except Exception as e:
+        return Response({"message":"something went wrong"}, status=status.HTTP_400_BAD_REQUEST)
+        
 
-    
     
 # @api_view(['GET'])
 # @permission_classes([IsAuthenticated])

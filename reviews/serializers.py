@@ -109,6 +109,15 @@ class ReviewCommentSerializer(serializers.ModelSerializer):
     review = serializers.SlugRelatedField(slug_field="id",queryset=Review.objects.all(),required=True)
     user = UserSerializer(read_only=True)
     
+    
+    def update(self, instance, validated_data):
+        request = self.context.get('request')
+        if request.user.pk != instance.user.pk:
+            raise serializers.ValidationError("You do not have permission to edit this profile.")
+        instance.save()
+        return instance
+        
+    
     class Meta:
         model = ReviewComment
         fields = ["id","user","review","created_at","content"] 
@@ -146,7 +155,6 @@ class ReviewSerializer(serializers.ModelSerializer):
     def get_likes_count(self,obj):
         return obj.review_likes.all().count()
     
-
     
     def get_rating(self, obj):
         rating = Rating.objects.filter(user=obj.user, movie=obj.movie).first()
@@ -176,8 +184,6 @@ class ReviewSerializer(serializers.ModelSerializer):
     def get_watchlisted(self, obj):
         watchlist = WatchList.objects.filter(user=obj.user, movie=obj.movie).first()
         return WatchListSerializer(watchlist).data if watchlist else None
-    
-    
 
     class Meta:
         model = Review
@@ -191,6 +197,9 @@ class ReviewSerializer(serializers.ModelSerializer):
     
     
     def update(self,instance,validated_data):
+        request = self.context.get('request')
+        if request.user.pk != instance.user.pk:
+            raise serializers.ValidationError("You do not have permission to edit this review.")
         instance.content = validated_data.get("content",instance.content)
         instance.save()
         return instance

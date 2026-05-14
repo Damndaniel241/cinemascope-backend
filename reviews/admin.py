@@ -12,7 +12,9 @@ class CustomReviewAdmin(admin.ModelAdmin):
     
 class CustomMovieAdmin(admin.ModelAdmin):
     list_display = ("__str__","id")
-   
+    
+class CustomReviewCommentAdmin(admin.ModelAdmin):
+   list_display = ("id","__str__")
 
 admin.site.register(Review,CustomReviewAdmin)
 admin.site.register(Movie, CustomReviewAdmin)
@@ -20,5 +22,5 @@ admin.site.register(Rating)
 admin.site.register(Watch)
 admin.site.register(Like)
 admin.site.register(WatchList)
-admin.site.register(ReviewComment)
+admin.site.register(ReviewComment,CustomReviewCommentAdmin)
 admin.site.register(ReviewLike)

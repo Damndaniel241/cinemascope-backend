@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import signup,signin,get_by_user_name_or_id,test_site,activate_account,logout,token_refresh
+from .views import signup,signin,get_by_user_name_or_id,test_site,activate_account,logout,token_refresh,change_password
 from rest_framework_simplejwt.views import TokenBlacklistView
 
 urlpatterns =[
@@ -10,7 +10,8 @@ urlpatterns =[
     path("activate/<uidb64>/<token>/",activate_account),
     path("auth/logout/",logout),
     path('api/token/blacklist/', TokenBlacklistView.as_view(), name='token_blacklist'),
-    path('auth/refresh',token_refresh)
+    path('auth/refresh',token_refresh),
+    path('change-password/', change_password)
     # path("try/",try_user)
     # path('verify/<uidb64>/')
 ]
