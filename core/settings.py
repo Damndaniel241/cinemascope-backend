@@ -15,6 +15,11 @@ import sys, os
 from dotenv import load_dotenv
 from datetime import timedelta
 import logging
+from decouple import config
+
+
+
+FRONTEND_URL = config("FRONTEND_URL")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -23,7 +28,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#@oxm!*$9ydn(a^-h@5%)=!c()b@mlev$43^ww%q3fa1oyos_$'
+SECRET_KEY = "django-insecure-#@oxm!*$9ydn(a^-h@5%)=!c()b@mlev$43^ww%q3fa1oyos_$"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -34,66 +39,63 @@ LOGGER = logging.getLogger(__name__)
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'corsheaders',
-    'rest_framework',
-    'users',
-    'drf_spectacular',
-    'rest_framework_simplejwt.token_blacklist',
-    'reviews'
-    
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+    "corsheaders",
+    "rest_framework",
+    "users",
+    "drf_spectacular",
+    "rest_framework_simplejwt.token_blacklist",
+    "reviews",
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
 # CORS_ORIGIN_ALLOW_ALL = True
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ["http://localhost:5173"]
 CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
 ]
 
-ROOT_URLCONF = 'core.urls'
+ROOT_URLCONF = "core.urls"
 
 TEMPLATES = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "DIRS": [],
+        "APP_DIRS": True,
+        "OPTIONS": {
+            "context_processors": [
+                "django.template.context_processors.request",
+                "django.contrib.auth.context_processors.auth",
+                "django.contrib.messages.context_processors.messages",
             ],
         },
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'
+WSGI_APPLICATION = "core.wsgi.application"
 
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.AllowAny',
-    ),
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.AllowAny",),
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
     # 'DEFAULT_PARSER_CLASSES': [
     #     'rest_framework.parsers.JSONParser',
@@ -102,9 +104,9 @@ REST_FRAMEWORK = {
 
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'My API',
-    'DESCRIPTION': 'cinemascope API documentation',
-    'VERSION': '1.0.0',
+    "TITLE": "My API",
+    "DESCRIPTION": "cinemascope API documentation",
+    "VERSION": "1.0.0",
 }
 
 SIMPLE_JWT = {
@@ -122,8 +124,6 @@ SIMPLE_JWT = {
     "SLIDING_TOKEN_LIFETIME": timedelta(minutes=60),
     "SLIDING_TOKEN_REFRESH_LIFETIME": timedelta(weeks=52),
     "TOKEN_TYPE_CLAIM": "token_type",
-
-     
 }
 
 
@@ -131,24 +131,23 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'cinemascope',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "cinemascope",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
 
 if "test" in sys.argv:
     DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
         }
     }
-    
 
 
 # Password validation
@@ -156,16 +155,16 @@ if "test" in sys.argv:
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
 
@@ -175,9 +174,9 @@ AUTH_USER_MODEL = "users.User"
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = "UTC"
 
 USE_I18N = True
 
@@ -187,77 +186,80 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = "static/"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_URL = "/media/"
 
 
 # gmail settings
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
 EMAIL_PORT = 587
-EMAIL_FROM = 'lombardia241@gmail.com'
-EMAIL_HOST_USER = 'lombardia241@gmail.com'
-EMAIL_HOST_PASSWORD= 'mgym adbc evvy bsf'
+EMAIL_FROM = os.getenv("EMAIL_FROM")
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+# EMAIL_FROM = 'lombardia241@gmail.com'
+# EMAIL_HOST_USER = 'lombardia241@gmail.com'
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+# EMAIL_HOST_PASSWORD= 'mgym adbc evvy bsf'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
 
+EMAIL_CLIENT_ID = os.getenv("EMAIL_CLIENT_ID")
+EMAIL_CLIENT_SECRET = os.getenv("EMAIL_CLIENT_SECRET")
 
-EMAIL_CLIENT_ID = "0e432d2f7b9376bad39ee215ae3d7ea9"
-EMAIL_CLIENT_SECRET = "d473f9d0575c7e0b938b87a322a54fc4"
+# EMAIL_CLIENT_ID = "0e432d2f7b9376bad39ee215ae3d7ea9"
+# EMAIL_CLIENT_SECRET = "d473f9d0575c7e0b938b87a322a54fc4"
 
 
 LOGGING = {
-    "version":1,
-    "disable_existing_loggers":False,
-    "filters":{},
-    "formatters":{
-        'verbose': {
-            'format': '{asctime} {levelname} {name} {message} {module}.py',
-            'style': '{',
-        },
-        },
-    "handlers":{
-        'console':{
-            'level':'DEBUG',
-            'class':'logging.StreamHandler',
-            'formatter':'verbose',
-        },
-        'file': {
-            'class': 'logging.FileHandler',
-            'filename': 'errors.log',
-            'formatter': 'verbose',
-        },
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'formatter': 'verbose',
+    "version": 1,
+    "disable_existing_loggers": False,
+    "filters": {},
+    "formatters": {
+        "verbose": {
+            "format": "{asctime} {levelname} {name} {message} {module}.py",
+            "style": "{",
         },
     },
-    "loggers":{
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': False,
+    "handlers": {
+        "console": {
+            "level": "DEBUG",
+            "class": "logging.StreamHandler",
+            "formatter": "verbose",
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "filename": "errors.log",
+            "formatter": "verbose",
+        },
+        "mail_admins": {
+            "level": "ERROR",
+            "class": "django.utils.log.AdminEmailHandler",
+            "formatter": "verbose",
+        },
+    },
+    "loggers": {
+        "django.request": {
+            "handlers": ["mail_admins"],
+            "level": "ERROR",
+            "propagate": False,
         },
         "users": {  # <--- Add this block
-        "handlers": ["console", "file"],
-        "level": "INFO",
-        "propagate": True,
-    },
+            "handlers": ["console", "file"],
+            "level": "INFO",
+            "propagate": True,
         },
-    'root': {
-        'handlers': ['console', 'file', 'mail_admins'],
-        'level': 'WARNING',
     },
-
-
+    "root": {
+        "handlers": ["console", "file", "mail_admins"],
+        "level": "WARNING",
+    },
 }

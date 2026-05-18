@@ -99,6 +99,12 @@ class ChangePasswordSerializer(serializers.Serializer):
             raise serializers.ValidationError({ "password": "new Password can't be same as old." })
         return attrs
     
+    def validate_old_password(self,value):
+        user = self.context['request'].user
+        if not user.check_password(value):
+            raise serializers.ValidationError({"password":"old password is not correct"})
+        return value
+    
     
     def update(self, instance, validated_data):
         # request = self
@@ -106,3 +112,17 @@ class ChangePasswordSerializer(serializers.Serializer):
         instance.set_password(instance.password)
         instance.save()
         return instance
+
+
+
+class ForgotPasswordSerializer(serializers.Serializer):
+    password = serializers.CharField(write_only=True,required=True,validators=[validate_password])
+    password2 = serializers.CharField(write_only=True,required=True)
+
+    def validate(self, attrs):
+        password = attrs.get('password')
+        password2 = attrs.get('password2')
+
+        if password != password2:
+            raise serializers.ValidationError({ "password": "Password fields didn't match." })
+        return attrs

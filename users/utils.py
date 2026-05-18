@@ -1,8 +1,10 @@
 from pysendpulse.pysendpulse import PySendPulse
 import core.settings as settings
 import logging
+
 # from __future__ import print_function
 import time
+
 # import brevo_python
 from brevo_python.rest import ApiException
 from pprint import pprint
@@ -34,31 +36,37 @@ LOGGER = logging.getLogger(__name__)
 
 def send_email(send_smtp_email):
     import brevo_python
+
     configuration = brevo_python.Configuration()
-    configuration.api_key['api-key'] = os.getenv('BREVO_API_KEY')
+    configuration.api_key["api-key"] = os.getenv("BREVO_API_KEY")
     # configuration.api_key['api-key'] = '44yr4rrfbif2r329r32r'
     # configuration.api_key_prefix['api-key'] = 'Bearer'
-    api_instance = brevo_python.TransactionalEmailsApi(brevo_python.ApiClient(configuration))
+    api_instance = brevo_python.TransactionalEmailsApi(
+        brevo_python.ApiClient(configuration)
+    )
     try:
         # Send a transactional email
-        
+
         api_response = api_instance.send_transac_email(send_smtp_email)
-       
+
         pprint(api_response)
         return 1
     except ApiException as e:
-        # raise 
-        print("Exception when calling TransactionalEmailsApi->send_transac_email: %s\n" % e)
+        # raise
+        print(
+            "Exception when calling TransactionalEmailsApi->send_transac_email: %s\n"
+            % e
+        )
         return 0
+
 
 def gen_otp():
     import random
+
     string = ""
     list1 = []
-    for i in range(0,6):
-        list1.append(str(random.randrange(0,10)))
+    for i in range(0, 6):
+        list1.append(str(random.randrange(0, 10)))
     string = string.join(list1)
-    
+
     return string
-
-
