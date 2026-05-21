@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from users.models import User,UserProfile
+from users.models import User,UserProfile,Follow
 from django.contrib.auth.password_validation import validate_password
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth import authenticate
 from django.db import transaction
-
+# from django.core import serializers
 
 # class SocialField(serializers.Field):
 #     def to_representation(self, value:Social):
@@ -18,14 +18,51 @@ from django.db import transaction
 #             title=data.get("title"),
 #             link=data.get("link")
 #         )[0]
+
+# class UserFollowingSerializer(serializers.ModelSerializer):
+#      class Meta:
+#         model = User
+#         # fields = ["id", "username"]
+#         fields = "__all__"
+
+
+# 1. Create a lightweight serializer for the nested follower/following lists
+class UserMinInfoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ["id", "user_name", "email"] # Fields you want to show in the lists
         
 class UserProfileSerializer(serializers.ModelSerializer):
     profile_image = serializers.ImageField(required=False)
     profile_cover = serializers.ImageField(required=False)
+    # 'followers' is a direct ManyToMany field on UserProfile pointing to User instances
+    followers = UserMinInfoSerializer(many=True, read_only=True)
+    # 'following' lives on the User object (via related_name), so we point the source to the user's relationship
+    # following = UserMinInfoSerializer(source="user.following.all__user", many=True, read_only=True)
+    following = serializers.SerializerMethodField()
+    following_count = serializers.SerializerMethodField()
+    followers_count = serializers.SerializerMethodField()
+    # followers = UserProfileSerializer()
+    # following = UserFollowingSerializer(source="user.following", many=True, read_only=True)
     class Meta:
         model = UserProfile
-        fields = ["user","bio","website","location","profile_image","profile_cover"]
+        fields = ["user","bio","website","location","profile_image","profile_cover","followers","following","following_count","followers_count"]
+
+    def get_following(self, obj):
+        # Grab the profiles the user follows, then extract their actual User model records
+        followed_profiles = obj.user.following.all()
+        users_followed = [profile.user for profile in followed_profiles]
         
+        return UserMinInfoSerializer(users_followed, many=True).data
+
+    def get_following_count(self,obj):
+        return obj.user.following.all().count()
+    
+    def get_followers_count(self,obj):
+        return obj.followers.all().count()
+    # def get_following(self,obj):
+    #     queryset =  obj.user.following.all()
+    #     return UserFollowingSerializer(queryset)
         
 
 class UserSerializer(serializers.ModelSerializer):
@@ -126,3 +163,10 @@ class ForgotPasswordSerializer(serializers.Serializer):
         if password != password2:
             raise serializers.ValidationError({ "password": "Password fields didn't match." })
         return attrs
+
+
+class FollowSerializer(serializers.Serializer):
+    # user_followed = ser
+     class Meta:
+        model = Follow
+        fields = ['user_following','user_followed']

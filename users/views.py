@@ -9,13 +9,14 @@ from .serializers import (
     LoginSerializer,
     ChangePasswordSerializer,
     ForgotPasswordSerializer,
+    FollowSerializer,
 )
 from rest_framework_simplejwt.authentication import JWTAuthentication
 from rest_framework_simplejwt.tokens import RefreshToken
 
 # from rest_framework_simplejwt.token_blacklist import OutstandingToken,BlacklistedToken
 from rest_framework_simplejwt.exceptions import AuthenticationFailed
-from .models import User
+from .models import User, Follow, UserProfile
 from .services import activate_email, send_reset_password
 import logging
 from django.contrib.sites.shortcuts import get_current_site
@@ -27,6 +28,7 @@ import hashlib
 import bcrypt
 from datetime import timedelta
 from django.utils import timezone
+import core.settings as settings
 
 # Create your views here.
 LOGGER = logging.getLogger(__name__)
@@ -247,12 +249,12 @@ def activate_account(request):
     token = request.query_params.get("token")
     print("uidb64", uidb64)
     print("token", token)
-    
+
     try:
         uid = urlsafe_base64_decode(uidb64)
         user = User.objects.get(pk=uid)
-    # except (TypeError, ValueError, User.DoesNotExist) as error:
-    #     user = None
+        # except (TypeError, ValueError, User.DoesNotExist) as error:
+        #     user = None
 
         if (
             user is not None
@@ -267,7 +269,7 @@ def activate_account(request):
             )
 
     except Exception as e:
-        return Response({"error":str(e)},status=status.HTTP_400_BAD_REQUEST)
+        return Response({"error": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(["POST"])
@@ -338,10 +340,11 @@ def change_password(request):
 
 
 @api_view(["POST"])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def forgot_password(request):
     try:
         email = request.data["email"]
+
         user = User.objects.get(email=email)
         if not user.is_active or user.is_blacklisted:
             return Response(
@@ -392,10 +395,11 @@ def verify_reset_passsword_token(request):
         # try:
         # uid = urlsafe_base64_decode(uidb64)
         # user = User.objects.get(pk=uid)
-        token_hash = token_hash = hashlib.sha256(token.encode()).hexdigest()
+        token_hash = hashlib.sha256(token.encode()).hexdigest()
         token_obj = PasswordResetToken.objects.filter(
             token_hash=token_hash, used=False
         ).first()
+
         # except (TypeError, ValueError, User.DoesNotExist, PasswordResetToken.DoesNotExist) as error:
         #     return Response(
         #     {"message": "something went wrong"}, status=status.HTTP_400_BAD_REQUEST
@@ -404,44 +408,105 @@ def verify_reset_passsword_token(request):
         if not token_obj or token_obj.expires_at < timezone.now():
             raise AuthenticationFailed("Invalid or expired token")
 
+        print("una token ", token_obj)
         user = token_obj.user
+        print("user = ", user)
+        print("user can reset now 1=", user.can_reset)
         if user is not None and user.is_active:
-            serializer = ForgotPasswordSerializer(request.data)
+            user.can_reset = True
+            user.save()
+            print("user can reset now 2=", user.can_reset)
+            # request.session["user_id"] = user.pk
+            request.session["user_email_token"] = token
+            return Response(
+                {"message": "you can now reset your password"},
+                status=status.HTTP_200_OK,
+            )
+        return Response(
+            {"message": "User either doesn't exist or hasn't been activated"},
+            status=status.HTTP_400_BAD_REQUEST,
+        )
 
-            if serializer.is_valid():
+    except Exception as e:
+        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(["POST"])
+def reset_password(request):
+    try:
+        # user_id = request.session.get("user_id", None)
+        token = request.session.get("user_email_token", None)
+        token_hash = hashlib.sha256(token.encode()).hexdigest()
+        token_obj = PasswordResetToken.objects.filter(
+            token_hash=token_hash, used=False
+        ).first()
+
+        if not token_obj or token_obj.expires_at < timezone.now():
+            raise AuthenticationFailed("Invalid or expired token")
+
+        user = token_obj.user
+
+        print("user =", user)
+        print("user is active =", user.is_active)
+        print("user cam reset = ", user.can_reset)
+        if user is not None and user.is_active and user.can_reset:
+            print("user =", user)
+            print("user is active =", user.is_active)
+            print("user cam reset = ", user.can_reset)
+            serializer = ForgotPasswordSerializer(data=request.data)
+            if serializer.is_valid(raise_exception=True):
                 user.set_password(request.data["password"])
                 user.save()
 
                 token_obj.used = True
                 token_obj.save()
 
+                del request.session["user_email_token"]
+
                 return Response(
                     {"message": "password was reset successfully"},
                     status=status.HTTP_200_OK,
                 )
+            return Response(
+                {"error": serializer.errors}, status=status.HTTP_400_BAD_REQUEST
+            )
 
-    except Exception as e:
         return Response(
-            {"message": "something went wrong"}, status=status.HTTP_400_BAD_REQUEST
+            {
+                "message": "User either doesn't exist or hasn't been activated or needs to request a new link"
+            },
+            status=status.HTTP_400_BAD_REQUEST,
         )
 
-        # if (
+    except Exception as e:
+        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)
 
 
-#         user is not None
-#         and not user.is_active
-#         and account_activation_token.check_token(user, token)
-#     ):
-
-
-# @api_view(['GET'])
-# @permission_classes([IsAuthenticated])
-# def try_user(request):
-#     try:
-#         user = request.user
-#         print("user = ", user)
-
-
-#         return Response({"message":"successful"},status=status.HTTP_200_OK)
-#     except Exception as e:
-#         return Response({"message":"something went wrong"}, status=status.HTTP_400_BAD_REQUEST)
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def follow_user(request):
+    try:
+        other_user = User.objects.get(pk=request.data["user_id"])
+      
+        user = request.user
+        
+        if other_user:
+            other_user_profile = UserProfile.objects.get(user=other_user)
+            if not user in other_user_profile.followers.all():
+                user.following.add(other_user_profile)
+   
+                user.save()
+                return Response(
+                    {"message": f"You have followed {other_user.user_name}"},
+                    status=status.HTTP_200_OK,
+                )
+            else:
+                user.following.remove(other_user_profile)
+                user.save
+                return Response(
+                    {"message": f"You have unfollowed {other_user.user_name}"},
+                    status=status.HTTP_200_OK,
+                )
+         
+    except Exception as e:
+        return Response({"message": str(e)}, status=status.HTTP_400_BAD_REQUEST)

@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from users.forms import CustomUserCreationForm, CustomUserChangeForm
-from users.models import User,UserProfile
+from users.models import User,UserProfile,Follow
 from users.tokens import RefreshTokenStore,PasswordResetToken
 
 class CustomUserAdmin(UserAdmin):
@@ -36,6 +36,7 @@ class RefreshTokenStoreAdmin(admin.ModelAdmin):
 admin.site.register(PasswordResetToken)
 admin.site.register(User, CustomUserAdmin)
 admin.site.register(UserProfile)
+admin.site.register(Follow)
 
 
 

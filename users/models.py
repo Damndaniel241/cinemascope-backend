@@ -15,6 +15,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     date_joined = models.DateTimeField(default=timezone.now)
     is_verified = models.BooleanField(default=False)
     is_blacklisted = models.BooleanField(default=False)
+    can_reset = models.BooleanField(default=False)
     # verification_datetime = models.DateTimeField(
     #     null=True,
     #     verbose_name="Verification Datetime",
@@ -50,6 +51,16 @@ class UserProfile(models.Model):
     location = models.TextField(max_length=100,null=True,blank=True)
     profile_image = models.ImageField(upload_to="users/profile_images/", null=True,blank=True)
     profile_cover = models.ImageField(upload_to="users/profile_covers/", null=True,blank=True)
+    followers = models.ManyToManyField(User,related_name="following",blank=True)
     
     def __str__(self):
         return f"{self.user}'s profile"
+
+
+class Follow(models.Model):
+    user_followed =  models.ManyToManyField(User,related_name="follwers")
+    user_following = models.ManyToManyField(User,related_name="following2")
+
+
+    def __str__(self):
+        return f"{self.user_following} followed {self.user_followed}"

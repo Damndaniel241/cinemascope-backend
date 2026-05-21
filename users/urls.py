@@ -10,6 +10,8 @@ from .views import (
     change_password,
     forgot_password,
     verify_reset_passsword_token,
+    reset_password,
+    follow_user,
 )
 from rest_framework_simplejwt.views import TokenBlacklistView
 
@@ -23,8 +25,9 @@ urlpatterns = [
     path("api/token/blacklist/", TokenBlacklistView.as_view(), name="token_blacklist"),
     path("auth/refresh", token_refresh),
     path("change-password/", change_password),
-    path("password/reset/", forgot_password),
-    path('reset_confirm/<token>',verify_reset_passsword_token)
-    # path("try/",try_user)
+    path("password/forgot/", forgot_password),
+    path('reset_confirm/',verify_reset_passsword_token),
+    path("password/reset/",reset_password),
+    path("follow_user/",follow_user)
     # path('verify/<uidb64>/')
 ]

@@ -20,6 +20,7 @@ from decouple import config
 
 
 FRONTEND_URL = config("FRONTEND_URL")
+BACKEND_URL = config("BACKEND_URL")
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -263,3 +264,10 @@ LOGGING = {
         "level": "WARNING",
     },
 }
+
+
+# Ensure session cookies work across ports if on localhost
+SESSION_COOKIE_SAMESITE = 'None' # Use 'Lax' if on identical domains in production
+SESSION_COOKIE_SECURE = False    # Set to True in production with HTTPS
+# SESSION_COOKIE_AGE = 1800 
+SESSION_COOKIE_HTTPONLY = True
