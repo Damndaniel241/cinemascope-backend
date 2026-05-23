@@ -320,10 +320,10 @@ def get_movie_user_data(request):
 def get_review_user_data(request):
     try:
         review_obj = get_object_or_404(Review, id=request.query_params.get("review_id"))
-        print("did you get my object = ", review_obj.id)
+        print("did you get my object = ", review_obj.pk)
         if review_obj:
             review_like_obj = ReviewLike.objects.filter(
-                review=review_obj.id, user=request.user
+                review=review_obj.pk, user=request.user
             ).first()
             print("did you get my review like object = ", review_like_obj)
             serializer = ReviewLikeSerializer(review_like_obj)

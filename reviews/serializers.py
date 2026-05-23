@@ -1,12 +1,16 @@
 from rest_framework import serializers
-from .models import Review, Movie, Rating, Watch, Like, WatchList
+from .models import Review, Movie, Rating, Watch, Like, WatchList,Tag
 from users.serializers import UserProfileSerializer, UserSerializer
 from users.models import User
 from .review_comment import ReviewComment
 from .review_like import ReviewLike
 
-# def get_ra
 
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = '__all__'
 
 class UserReviewSerializer(serializers.ModelSerializer):
     class Meta:
